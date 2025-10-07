@@ -45,3 +45,16 @@ The following packages were added:
   com.unity.timeline@1.6.5
   com.unity.ugui@1.0.0
   com.unity.visualscripting@1.9.4
+
+=== Tue Sep 16 14:06:46 2025
+
+Packages were changed.
+Update Mode: updateDependencies
+
+The following packages were added:
+  com.unity.ai.navigation@1.1.6
+The following packages were updated:
+  com.unity.collab-proxy from version 2.5.2 to 2.7.1
+  com.unity.ide.rider from version 3.0.31 to 3.0.36
+  com.unity.textmeshpro from version 3.0.6 to 3.0.7
+  com.unity.timeline from version 1.6.5 to 1.7.7
