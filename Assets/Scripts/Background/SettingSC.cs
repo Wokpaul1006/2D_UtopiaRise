@@ -89,7 +89,7 @@ public class SettingSC : MonoBehaviour
         PlayerPrefs.SetInt("sfxState", sfxAllow);
     }
     public void ExitGame() => Application.Quit();
-    public void ToPlayerInfo() => genCtrl.ShowInfor();
+    public void ToPlayerInfo() => genCtrl.ShowInfor(true);
     public void ToGGPlayStore() => Application.OpenURL("https://play.google.com/store/apps/developer?id=Sadek+Games+Studio");
     public void ToPrivacyPolicy() => Application.OpenURL("https://sadekgame.wordpress.com/2025/07/13/privacy-policy-of-utopia-rise/");
 }

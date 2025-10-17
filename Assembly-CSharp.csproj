@@ -63,12 +63,15 @@
     <Compile Include="Assets\Scripts\ShopSC.cs" />
     <Compile Include="Assets\Scripts\UtopiaCharSC.cs" />
     <Compile Include="Assets\Scripts\GeneralContrlSC.cs" />
+    <Compile Include="Assets\Scripts\CreditSC.cs" />
     <Compile Include="Assets\Scripts\StepholderSC.cs" />
+    <Compile Include="Assets\Scripts\RatingSC.cs" />
     <Compile Include="Assets\Scripts\MainMenu\PlayerInforSC.cs" />
     <Compile Include="Assets\Scripts\Background\SoundSC.cs" />
     <Compile Include="Assets\Scripts\Ads\AdConfig.cs" />
     <Compile Include="Assets\Scripts\Ads\AdsMN.cs" />
     <Compile Include="Assets\Scripts\Background\CloudSC.cs" />
+    <Compile Include="Assets\Scripts\DataSC.cs" />
     <Compile Include="Assets\Scripts\UI\CameraFollowPlayerSC.cs" />
     <Compile Include="Assets\Scripts\Background\SettingSC.cs" />
     <Compile Include="Assets\Scripts\ShopPanelSC.cs" />

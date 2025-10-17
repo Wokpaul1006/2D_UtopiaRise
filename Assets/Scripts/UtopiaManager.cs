@@ -43,6 +43,7 @@ public class UtopiaManager : MonoBehaviour
     private float randStepX, randStepY;
     public int stepListOnScreen;
 
+
     //Scoring variables
     int curScore;
     internal int curLevel;
@@ -63,7 +64,7 @@ public class UtopiaManager : MonoBehaviour
         HandleUIs();
 
         #region Ads init
-        adsMn = GameObject.Find("Ads_MN").GetComponent<AdsMN>();
+        adsMn = GameObject.Find("OBJ_AdsMN").GetComponent<AdsMN>();
         if (adsMn == null) { print("adsMN null"); }
         #endregion
     }
@@ -146,7 +147,7 @@ public class UtopiaManager : MonoBehaviour
         character.ChangDir();
     }
     #region Internal Handle
-    private void HandleUIs()
+    public void HandleUIs()
     {
         if(gameState == 0)
         {
@@ -166,16 +167,16 @@ public class UtopiaManager : MonoBehaviour
     {
         yield return new WaitForSeconds(2);
         float randY = 0f;
-        if (gameState == 0) { randY = Random.Range(2, 6); }
-        else if(gameState == 1 || gameState == 2) { randY = character.transform.position.y + Random.Range(-2, 6); }
-        Instantiate(cloundList[Random.Range(0, 2)], new Vector3(4, randY, 0), Quaternion.identity);
+        if (gameState == 0) { randY = RandomInt(2, 6); }
+        else if(gameState == 1 || gameState == 2) { randY = character.transform.position.y + UnityEngine.Random.Range(-2, 6); }
+        Instantiate(cloundList[RandomInt(0,2)], new Vector3(4, randY, 0), Quaternion.identity);
         StartCoroutine(SpawnClound());
     }
     public void DecideStepSpawn()
     {
         if (stepListOnScreen < 2)
         {
-            randStepOder = Random.Range(0, 3); //Decide which step prefab to spawn
+            randStepOder = RandomInt(0,3); //Decide which step prefab to spawn
             RandPosStepSpawn(); //Caculatin position of step
             int temp = randStepOder % 2;
             if (temp == 1.25f)
@@ -209,7 +210,7 @@ public class UtopiaManager : MonoBehaviour
     }
     private void RandPosStepSpawn()
     {
-        randStepX = Random.Range(-(newestStepPos.x) - 1.25f, newestStepPos.x + 1.25f);
+        randStepX = RandomFloat(-(newestStepPos.x) - 1.25f, newestStepPos.x + 1.25f);
         randStepY += 1.25f;
         nextStepPos = new Vector3(randStepX, randStepY, 0);
     }
@@ -267,11 +268,11 @@ public class UtopiaManager : MonoBehaviour
         UpdateGameState(0);
         MenuCAN.gameObject.SetActive(true);
     }
-    public void OnShowSetting() => genCtrl.ShowSetting();
-    public void OnShowPause() => genCtrl.ShowPause();
-    public void OnShowLoose() => genCtrl.ShowLose();
-    public void OnShowReward() => genCtrl.ShowReward();
-    public void OnShowShop() => genCtrl.ShowShop();
+    public void OnShowSetting() => genCtrl.ShowSetting(true);
+    public void OnShowPause() => genCtrl.ShowPause(true);
+    public void OnShowLoose() => genCtrl.ShowLose(true);
+    public void OnShowReward() => genCtrl.ShowReward(true);
+    public void OnShowShop() => genCtrl.ShowShop(true);
     public void IsShowLive(int curLive)
     {
         switch (curLive)
@@ -288,4 +289,13 @@ public class UtopiaManager : MonoBehaviour
         }
     }
     #endregion
+
+    int RandomInt(int min, int max)
+    {
+        return UnityEngine.Random.Range(min, max);
+    }
+    float RandomFloat(float min, float max)
+    {
+        return UnityEngine.Random.Range(min, max);
+    }
 }
