@@ -9,7 +9,7 @@ public class GeneralContrlSC : Singleton<GeneralContrlSC>
     [HideInInspector] SettingSC settingPnl;
     [HideInInspector] LoseSC losePnl;
     [HideInInspector] PlayerInforSC playerPnl;
-    [HideInInspector] DailyRewardSC dailyrewardPnl;
+    [SerializeField] DailyRewardSC dailyrewardPnl;
     [HideInInspector] ShopPanelSC shopPnl;
     [HideInInspector] SoundSC sfxMuzik;
     [HideInInspector] MainThemeSC mainthemMuzik;
