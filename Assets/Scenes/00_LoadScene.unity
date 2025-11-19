@@ -6943,6 +6943,7 @@ GameObject:
   - component: {fileID: 1052004404}
   - component: {fileID: 1052004403}
   - component: {fileID: 1052004407}
+  - component: {fileID: 1052004408}
   m_Layer: 5
   m_Name: CAN_GenControl
   m_TagString: Untagged
@@ -7059,6 +7060,18 @@ MonoBehaviour:
   isDestroyOnLoad: 0
   dailyrewardPnl: {fileID: 0}
   toDay: 
+--- !u!114 &1052004408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1052004401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e1e4423b6d56342bf757e5a4a54f9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1063239994
 GameObject:
   m_ObjectHideFlags: 0

@@ -16,6 +16,7 @@ public class GeneralContrlSC : Singleton<GeneralContrlSC>
     [HideInInspector] UtopiaManager utopiaMN;
     [HideInInspector] CreditSC creditPnl;
     [HideInInspector] RatingSC reatingPnl;
+    [HideInInspector] SceneMN sceneCtr;
     [HideInInspector] GameObject readmePnl, leaderPnl;
 
     public string toDay;
@@ -34,6 +35,7 @@ public class GeneralContrlSC : Singleton<GeneralContrlSC>
         leaderPnl = GameObject.Find("PNL_Leaderboard");
         sfxMuzik = GameObject.Find("OBJ_SoundControl").GetComponent<SoundSC>();
         mainthemMuzik = GameObject.Find("OBJ_SoundControl").GetComponent<MainThemeSC>();
+        sceneCtr = GameObject.Find("CAN_GenControl").GetComponent<SceneMN>();
         HideAllPanel();
         
         toDay = DateTime.Today.Day.ToString();
@@ -74,5 +76,9 @@ public class GeneralContrlSC : Singleton<GeneralContrlSC>
         ShowCredit(false);
         ShowRating(false);
         ShowReward(false);
+    }
+    public void GenLoadScene(sbyte orderScene) 
+    {
+        sceneCtr.OnLoadScene(orderScene);   
     }
 }

@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class LoadSC : MonoBehaviour
 {
+    [HideInInspector] GeneralContrlSC genCtr;
     [SerializeField] Slider loadSlide;
     [SerializeField] Text loadTips;
 
@@ -19,7 +20,7 @@ public class LoadSC : MonoBehaviour
     IEnumerator RunLoad()
     {
         loadSpd = Random.Range(0.01f, 0.5f);
-        if (loadSlide.value >= 1) { SceneManager.LoadScene("01_Utopia"); }
+        if (loadSlide.value >= 1) { genCtr.GenLoadScene(1); }
         yield return new WaitForSeconds(0.1f);
         loadSlide.value += loadSpd * Time.deltaTime * 10;
         UpdateTips(loadSlide.value);
