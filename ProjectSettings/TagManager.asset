@@ -3,7 +3,14 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Tidal
+  - Platform
+  - Axe
+  - Ground
+  - Tree
+  - Wood
+  - Noah
   layers:
   - Default
   - TransparentFX

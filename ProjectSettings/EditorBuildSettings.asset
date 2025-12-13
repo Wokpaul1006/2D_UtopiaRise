@@ -11,4 +11,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/01_Home.unity
     guid: 96d3459993ddc124996b0214045e0eb8
+  - enabled: 1
+    path: Assets/Scenes/02_UtopiaChase.unity
+    guid: b60ac14012346c246876cb672afcacca
+  - enabled: 1
+    path: Assets/Scenes/03_ArkMaking.unity
+    guid: 862d4627f4f8283459b0901e2bb9a46f
+  - enabled: 1
+    path: Assets/Scenes/04_AnimalSecure.unity
+    guid: 6a6d64d26c65eb64384a47d94c61ba42
   m_configObjects: {}
