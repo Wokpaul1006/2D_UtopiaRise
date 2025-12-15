@@ -75,6 +75,7 @@
     <Compile Include="Assets\Scripts\Gameplay\AnimalS\TrexSC.cs" />
     <Compile Include="Assets\Scripts\Gameplay\ArkSC.cs" />
     <Compile Include="Assets\Scripts\Backend\SceneMN.cs" />
+    <Compile Include="Assets\TutorialSC.cs" />
     <Compile Include="Assets\Scripts\Gameplay\AnimalS\CricketSC.cs" />
     <Compile Include="Assets\Scripts\Interface\AchievementSC.cs" />
     <Compile Include="Assets\Scripts\Gameplay\AnimalS\CrocoSC.cs" />
