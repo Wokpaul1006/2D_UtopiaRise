@@ -4270,6 +4270,7 @@ GameObject:
   - component: {fileID: 664845016}
   - component: {fileID: 664845018}
   - component: {fileID: 664845017}
+  - component: {fileID: 664845019}
   m_Layer: 5
   m_Name: PNL_Tutorial
   m_TagString: Untagged
@@ -4335,6 +4336,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 664845015}
   m_CullTransparentMesh: 1
+--- !u!114 &664845019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 664845015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ba0d09fcff7e6c4aa5e6e872589e8bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pnlTutorial01: {fileID: 1622550458}
+  pnlTutorial02: {fileID: 961829410}
+  pnlTutorial03: {fileID: 1492324024}
 --- !u!1001 &668001202
 PrefabInstance:
   m_ObjectHideFlags: 0

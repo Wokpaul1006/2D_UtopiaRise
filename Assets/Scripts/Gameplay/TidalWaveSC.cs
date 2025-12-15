@@ -17,7 +17,7 @@ public class TidalWaveSC : MonoBehaviour
     void Start()
     {
         genCtr = GameObject.Find("CAN_GenControl").GetComponent<GeneralContrlSC>();
-        moveSpd = 0;
+        moveSpd = 0.05f;
         waitToMove = 5f;
         rb = gameObject.GetComponent<Rigidbody2D>();
         originPos = transform.position;
@@ -32,15 +32,17 @@ public class TidalWaveSC : MonoBehaviour
         {
             cutwoodMn = GameObject.Find("CAN_ArkMaking").GetComponent<ArkMakingMNSC>();
             noah = GameObject.Find("OBJ_Noah(Clone)").GetComponent<NoahSC>();
-            InvokeRepeating(nameof(AutoFlooding), 10f, waitToMove);
+            Vector3 tempScale = gameObject.transform.localScale;
+            gameObject.transform.localScale = new Vector3(tempScale.x, tempScale.y * 5, tempScale.z);
+            InvokeRepeating(nameof(AutoFlooding), 1f, waitToMove);
         }
         else if(genCtr.gameMode == 4)
         {
             //Animal Finder
         }
     }
-    public void DecideMoveSpeed() => moveSpd += 0.01f;
-    public void DecideWaitToMove() => waitToMove -= 0.01f;
+    public void DecideMoveSpeed() => moveSpd += 0.05f;
+    public void DecideWaitToMove() => waitToMove -= 0.05f;
     private void AutoAscend()
     {
         gameObject.transform.position = new Vector3(lastPos.x, lastPos.y + (moveSpd * (float)utopiaMN.curLevel), 0);

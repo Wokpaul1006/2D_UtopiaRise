@@ -132,8 +132,9 @@ public class ArcadeJumpSC : MonoBehaviour
         for (int i = 0; i < 10; i++)
         {
             stepOrder++;
-            int randStepX, randStepOrder;
-            randStepX = Random.Range((int)lastStepPos.x - 2, (int)lastStepPos.x + 2);
+            float randStepX;
+            int randStepOrder;
+            randStepX = Random.Range(lastStepPos.x - 2, lastStepPos.x + 2);
             randStepOrder = Random.Range(0, stepListToShow.Count);
 
             if (previousStepPos.x == 0 && previousStepPos.y == 0)
@@ -144,7 +145,17 @@ public class ArcadeJumpSC : MonoBehaviour
             }
             else if (previousStepPos.y != 0)
             {
-                Instantiate(stepListToShow[randStepOrder], new Vector3(randStepX, previousStepPos.y + 0.25f), Quaternion.identity);
+                if(previousStepPos.x == randStepX)
+                {
+                    float tempRandStepX;
+                    tempRandStepX = randStepX + 0.5f;
+                    randStepX = tempRandStepX;
+                    Instantiate(stepListToShow[randStepOrder], new Vector3(randStepX+0.5f, previousStepPos.y + 0.25f), Quaternion.identity);
+                }else if(previousStepPos.x != randStepX)
+                {
+                    Instantiate(stepListToShow[randStepOrder], new Vector3(randStepX, previousStepPos.y + 0.25f), Quaternion.identity);
+                }
+
                 previousStepPos = new Vector3(randStepX, previousStepPos.y + 0.5f, 0);
                 if(stepOrder >= 10)
                 {

@@ -10,6 +10,8 @@ dependencies {
     implementation 'com.unity3d.ads-mediation:applovin-adapter:4.3.54' // Assets/LevelPlay/Editor/ISAppLovinAdapterDependencies.xml:5
     implementation 'com.unity3d.ads-mediation:mediation-sdk:8.10.0' // Assets/LevelPlay/Editor/IronSourceSDKDependencies.xml:5
     implementation 'com.unity3d.ads-mediation:unityads-adapter:4.3.58' // Assets/LevelPlay/Editor/ISUnityAdsAdapterDependencies.xml:5
+    implementation 'com.unity3d.ads-mediation:yandex-adapter:4.3.16' // Assets/LevelPlay/Editor/ISYandexAdapterDependencies.xml:9
+    implementation 'com.yandex.android:mobileads:7.15.2' // Assets/LevelPlay/Editor/ISYandexAdapterDependencies.xml:5
 // Android Resolver Dependencies End
 **DEPS**}
 

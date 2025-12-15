@@ -1,16 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class AnimalSC : MonoBehaviour
 {
+    [SerializeField] AnimalFinderSC animalCtr;
     Vector3 previousPos, newPos;
     internal string animalName;
     protected virtual void Start()
     {
+        animalCtr = GameObject.Find("CAN_AnimalSecure").GetComponent<AnimalFinderSC>();
         previousPos = gameObject.transform.position;
         InvokeRepeating(nameof(WanderAround), 0f, 2f);
-        Invoke(nameof(SelfDestruct), 20f);
+        Invoke(nameof(SelfDestruct), 30f);
     }
 
     void WanderAround()
@@ -24,6 +27,12 @@ public class AnimalSC : MonoBehaviour
     }
     void SelfDestruct()
     {
+        Destroy(gameObject);
+    }
+    private void OnMouseDown()
+    {
+        print("Animal name picked: " + animalName);
+        animalCtr.OnIncreasePoint(animalName);
         Destroy(gameObject);
     }
 }

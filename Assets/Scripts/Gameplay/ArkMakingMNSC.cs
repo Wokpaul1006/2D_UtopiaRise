@@ -22,6 +22,7 @@ public class ArkMakingMNSC : MonoBehaviour
     public int curLv; //Current Level of Player ingame
     private int countdownTime; //Time limit of player
     private int curGoal; //Goal player must reach, caculating each time level up;
+    private int randTreeToSpawn;
     //Collect Item Mode
     void Start()
     {
@@ -30,18 +31,34 @@ public class ArkMakingMNSC : MonoBehaviour
         isGameStart = false;
         curScore = 0;
         curLv = curGoal = 1;
-        countdownTime = 0;
+        countdownTime = 60;
         deviceType = genCtrl.deviceType;
         genCtrl.AssitsGamemode(3);
         OnHandleUIs();
-        OnHandleCountdown(countdownTime);
         OnInitMap();
     }
 
     // Update is called once per frame
-    void Update() {    }
+    void Update() 
+    {
+
+    }
 
     #region Handle Gameplay
+    private void CountdonwDecrease()
+    {
+        if (isGameStart == true)
+        {
+            countdownTime--;
+            if (countdownTime <= 0)
+            {
+                isGameStart = false;
+                OnLoose();
+                //Update score
+            }
+            OnHandleCountdown(countdownTime);
+        }      
+    }
     private void OnInitMap()
     {
         theMap = Instantiate(theMap, Vector3.zero, Quaternion.identity);
@@ -50,15 +67,18 @@ public class ArkMakingMNSC : MonoBehaviour
         theTide = Instantiate(theTide, new Vector3(-12, 0, 0), Quaternion.identity);
         isGameStart = true;
         InvokeRepeating(nameof(SpawnTree), 0f, 2);
+        InvokeRepeating(nameof(CountdonwDecrease), 0f, 1f);
     }
     private void SpawnTree()
     {
         if(isGameStart == true)
         {
+            randTreeToSpawn = Random.Range(0, 2);
             Vector3 randPos;
             randPos.x = Random.Range(player.transform.position.x - 5, player.transform.position.x + 5);
             randPos.y = Random.Range(player.transform.position.y - 5, player.transform.position.y + 5);
-            Instantiate(treeA, new Vector3(randPos.x, randPos.y, 0), Quaternion.identity);
+            if(randTreeToSpawn == 0)    Instantiate(treeA, new Vector3(randPos.x, randPos.y, 0), Quaternion.identity);
+            else if(randTreeToSpawn != 0)   Instantiate(treeB, new Vector3(randPos.x, randPos.y, 0), Quaternion.identity);
         }
     }
     public void IncreaseScore()
@@ -67,12 +87,20 @@ public class ArkMakingMNSC : MonoBehaviour
         if(curScore >= curGoal)
         {
             curLv++;
+            int tempCurSecond;
+            tempCurSecond = countdownTime;
+            countdownTime = tempCurSecond + 60;
+
             int tempNewGoal;
             tempNewGoal = curLv * curGoal;
             curGoal = tempNewGoal;
             theTide.ResetPos();
         }
         OnHandleUIs();
+    }
+    public void OnUpdatePlayerScore()
+    {
+        genCtrl.OnUpdatePlayerInformationAfterGames(curScore);
     }
     #endregion
 
@@ -97,7 +125,9 @@ public class ArkMakingMNSC : MonoBehaviour
     public void OnLoose()
     {
         isGameStart = false;
+        OnUpdatePlayerScore();
         genCtrl.ShowLose(true);
     }
     #endregion
+    
 }

@@ -176,7 +176,9 @@ public class GeneralContrlSC : Singleton<GeneralContrlSC>
     public void OnReplay()
     {
         //Load Reward
-        //sceneCtr.OnLoadScene("");
+        if(gameMode == 2) sceneCtr.OnLoadScene(2);
+        else if (gameMode == 3) sceneCtr.OnLoadScene(3);
+        else if (gameMode == 4) sceneCtr.OnLoadScene(4);
     }
     public void OnExistGame()
     {
@@ -201,8 +203,15 @@ public class GeneralContrlSC : Singleton<GeneralContrlSC>
         }else if(gameMode == 2)
         {
             arcadeCtr.isGameStart = true;
+        }else if(gameMode == 4)
+        {
+            animalSaver.isGameStart = true;
         }
         ShowPause(false);
+    }
+    public void OnUpdatePlayerInformationAfterGames(int score)
+    {
+        data.UpdateTotalScore(score);
     }
     public void OnPlayTheme(int state)
     {
