@@ -25,6 +25,7 @@ public class HomeSC : MonoBehaviour
     public void OnShowLoose() => genCtrl.ShowLose(true);
     public void OnShowReward() => genCtrl.ShowReward(true);
     public void OnShowShop() => genCtrl.ShowShop(true);
+    public void OnShowPromotion() => genCtrl.ShowPromo(true);
     public void OnShowLeader()
     {
         genCtrl.ShowLeader(true);

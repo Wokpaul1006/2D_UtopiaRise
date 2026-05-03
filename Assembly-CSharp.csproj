@@ -63,6 +63,7 @@
     <Compile Include="Assets\Scripts\Gameplay\AnimalS\LandTurtleSC.cs" />
     <Compile Include="Assets\Scripts\Gameplay\AnimalS\SheepSC.cs" />
     <Compile Include="Assets\Scripts\Gameplay\AnimalS\RamSC.cs" />
+    <Compile Include="Assets\Scripts\Interface\WoodSC.cs" />
     <Compile Include="Assets\Scripts\Gameplay\AnimalS\OstrictSC.cs" />
     <Compile Include="Assets\Scripts\Gameplay\AnimalS\HenSC.cs" />
     <Compile Include="Assets\Scripts\Gameplay\AnimalS\RabbitSC.cs" />
@@ -75,15 +76,14 @@
     <Compile Include="Assets\Scripts\Gameplay\AnimalS\TrexSC.cs" />
     <Compile Include="Assets\Scripts\Gameplay\ArkSC.cs" />
     <Compile Include="Assets\Scripts\Backend\SceneMN.cs" />
-    <Compile Include="Assets\TutorialSC.cs" />
     <Compile Include="Assets\Scripts\Gameplay\AnimalS\CricketSC.cs" />
     <Compile Include="Assets\Scripts\Interface\AchievementSC.cs" />
     <Compile Include="Assets\Scripts\Gameplay\AnimalS\CrocoSC.cs" />
     <Compile Include="Assets\Scripts\Gameplay\AnimalS\AnimalSC.cs" />
     <Compile Include="Assets\Scripts\Gameplay\AnimalS\HorseSC.cs" />
+    <Compile Include="Assets\Scripts\Joystick.cs" />
     <Compile Include="Assets\Scripts\Interface\LoseSC.cs" />
     <Compile Include="Assets\Scripts\Gameplay\AnimalS\ElephantSC.cs" />
-    <Compile Include="Assets\WoodSC.cs" />
     <Compile Include="Assets\Scripts\Gameplay\AnimalS\KoalaSC.cs" />
     <Compile Include="Assets\Scripts\Ads\AdConfig.cs" />
     <Compile Include="Assets\Scripts\Gameplay\AnimalS\AgoraGoatSC.cs" />
@@ -97,8 +97,8 @@
     <Compile Include="Assets\Scripts\Backend\MainThemeSC.cs" />
     <Compile Include="Assets\Scripts\Gameplay\AnimalS\GiraffSC.cs" />
     <Compile Include="Assets\Scripts\Interface\RatingSC.cs" />
+    <Compile Include="Assets\Scripts\TreeSC.cs" />
     <Compile Include="Assets\Scripts\Interface\LeaderSC.cs" />
-    <Compile Include="Assets\TreeSC.cs" />
     <Compile Include="Assets\Scripts\Interface\LoadSC.cs" />
     <Compile Include="Assets\Scripts\Gameplay\StepholderSC.cs" />
     <Compile Include="Assets\Scripts\Backend\Singleton.cs" />
@@ -122,7 +122,6 @@
     <Compile Include="Assets\Scripts\Backend\SettingSC.cs" />
     <Compile Include="Assets\Scripts\Backend\TipsList.cs" />
     <Compile Include="Assets\Scripts\Interface\DailyRewardSC.cs" />
-    <Compile Include="Assets\Joystick.cs" />
     <Compile Include="Assets\Scripts\Gameplay\NoahSC.cs" />
     <Compile Include="Assets\Scripts\Gameplay\AnimalS\CowSC.cs" />
     <Compile Include="Assets\Scripts\Backend\CameraFollowPlayerSC.cs" />
@@ -131,6 +130,8 @@
     <Compile Include="Assets\Scripts\Interface\ShopSC.cs" />
     <Compile Include="Assets\Scripts\Gameplay\AnimalS\GooseSC.cs" />
     <Compile Include="Assets\Scripts\Backend\SoundSC.cs" />
+    <Compile Include="Assets\Scripts\TutorialSC.cs" />
+    <Compile Include="Assets\Scripts\Interface\PromotionSC.cs" />
     <Compile Include="Assets\Scripts\Gameplay\ArcadeJumpSC.cs" />
   </ItemGroup>
   <ItemGroup>

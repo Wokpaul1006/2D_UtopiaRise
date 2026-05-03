@@ -1,0 +1,113 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8D441CA3-1174-F173-403B-828254534012}|Assembly-CSharp.csproj|d:\\projects\\2d project - sdcasual\\2d_utopiarise\\assets\\scripts\\interface\\dailyrewardsc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D441CA3-1174-F173-403B-828254534012}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\interface\\dailyrewardsc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D441CA3-1174-F173-403B-828254534012}|Assembly-CSharp.csproj|d:\\projects\\2d project - sdcasual\\2d_utopiarise\\assets\\scripts\\interface\\homesc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D441CA3-1174-F173-403B-828254534012}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\interface\\homesc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D441CA3-1174-F173-403B-828254534012}|Assembly-CSharp.csproj|d:\\projects\\2d project - sdcasual\\2d_utopiarise\\assets\\scripts\\gameplay\\generalcontrlsc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D441CA3-1174-F173-403B-828254534012}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gameplay\\generalcontrlsc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|d:\\projects\\2d project - sdcasual\\2d_utopiarise\\assets\\treesc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:assets\\treesc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\TutorialSC.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\TutorialSC.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DailyRewardSC.cs",
+              "DocumentMoniker": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\Interface\\DailyRewardSC.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Interface\\DailyRewardSC.cs",
+              "ToolTip": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\Interface\\DailyRewardSC.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Interface\\DailyRewardSC.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABRAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-03T11:06:50.292Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GeneralContrlSC.cs",
+              "DocumentMoniker": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\Gameplay\\GeneralContrlSC.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Gameplay\\GeneralContrlSC.cs",
+              "ToolTip": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\Gameplay\\GeneralContrlSC.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Gameplay\\GeneralContrlSC.cs",
+              "ViewState": "AgIAAEEAAAAAAAAAAAD4v1AAAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-03T10:57:42.266Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HomeSC.cs",
+              "DocumentMoniker": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\Interface\\HomeSC.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Interface\\HomeSC.cs",
+              "ToolTip": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\Interface\\HomeSC.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Interface\\HomeSC.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwB0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-03T10:57:18.247Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TreeSC.cs",
+              "DocumentMoniker": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\TreeSC.cs",
+              "RelativeDocumentMoniker": "Assets\\TreeSC.cs",
+              "ToolTip": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\TreeSC.cs",
+              "RelativeToolTip": "Assets\\TreeSC.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-03T10:56:20.527Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TutorialSC.cs",
+              "DocumentMoniker": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\TutorialSC.cs",
+              "RelativeDocumentMoniker": "Assets\\TutorialSC.cs",
+              "ToolTip": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\TutorialSC.cs",
+              "RelativeToolTip": "Assets\\TutorialSC.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-03T10:55:20.248Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 187,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{a80febb4-e7e0-4147-b476-21aaf2453969}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

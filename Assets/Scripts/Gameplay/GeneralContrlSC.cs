@@ -23,6 +23,7 @@ public class GeneralContrlSC : Singleton<GeneralContrlSC>
     [HideInInspector] LeaderSC leaderPnl;
     [HideInInspector] AchievementSC achievePnl;
     [HideInInspector] DataSC data;
+    [HideInInspector] PromotionSC promoPNl;
     [SerializeField] AdsMN adsMN;
 
     public string toDay;
@@ -53,6 +54,7 @@ public class GeneralContrlSC : Singleton<GeneralContrlSC>
         readmePnl = GameObject.Find("PNL_ReadMe");
         leaderPnl = GameObject.Find("PNL_Leaderboard").GetComponent<LeaderSC>();
         achievePnl = GameObject.Find("PNL_Achievement").GetComponent<AchievementSC>();
+        promoPNl = GameObject.Find("PNL_Leaderboard").GetComponent<PromotionSC>();
         tutotialPnl = GameObject.Find("PNL_Tutorial");
         sfxMuzik = GameObject.Find("OBJ_SoundControl").GetComponent<SoundSC>();
         mainthemMuzik = GameObject.Find("OBJ_SoundControl").GetComponent<MainThemeSC>();
@@ -76,6 +78,7 @@ public class GeneralContrlSC : Singleton<GeneralContrlSC>
     public void ShowAchievement(bool isShow) => achievePnl.gameObject.SetActive(isShow);
     public void ShowLeader(bool isShow) => leaderPnl.gameObject.SetActive(isShow);
     public void ShowTutorial(bool isShow) => tutotialPnl.gameObject.SetActive(isShow);
+    public void ShowPromo(bool isShow) => promoPNl.gameObject.SetActive(isShow);
     #endregion
 
     private void CheckDeviceType()
@@ -133,6 +136,7 @@ public class GeneralContrlSC : Singleton<GeneralContrlSC>
         ShowLeader(false);
         ShowTutorial(false);
         ShowSetting(false);
+        ShowPromo(false);
     }
     public void GenLoadScene(sbyte orderScene) 
     {
