@@ -74,7 +74,6 @@
     <Compile Include="Assets\Scripts\Gameplay\AnimalS\CatSC.cs" />
     <Compile Include="Assets\Scripts\Backend\CreditPanelSC.cs" />
     <Compile Include="Assets\Scripts\Gameplay\AnimalS\TrexSC.cs" />
-    <Compile Include="Assets\Scripts\Gameplay\ArkSC.cs" />
     <Compile Include="Assets\Scripts\Backend\SceneMN.cs" />
     <Compile Include="Assets\Scripts\Gameplay\AnimalS\CricketSC.cs" />
     <Compile Include="Assets\Scripts\Interface\AchievementSC.cs" />
@@ -87,7 +86,9 @@
     <Compile Include="Assets\Scripts\Gameplay\AnimalS\KoalaSC.cs" />
     <Compile Include="Assets\Scripts\Ads\AdConfig.cs" />
     <Compile Include="Assets\Scripts\Gameplay\AnimalS\AgoraGoatSC.cs" />
+    <Compile Include="Assets\Scripts\InventoryData.cs" />
     <Compile Include="Assets\Scripts\Gameplay\AnimalS\WalrusSC.cs" />
+    <Compile Include="Assets\Scripts\CentralPos.cs" />
     <Compile Include="Assets\Scripts\Ads\AdsMN.cs" />
     <Compile Include="Assets\Scripts\Gameplay\AnimalS\BeeSC.cs" />
     <Compile Include="Assets\Scripts\Gameplay\AnimalS\PigSC.cs" />
@@ -100,7 +101,6 @@
     <Compile Include="Assets\Scripts\TreeSC.cs" />
     <Compile Include="Assets\Scripts\Interface\LeaderSC.cs" />
     <Compile Include="Assets\Scripts\Interface\LoadSC.cs" />
-    <Compile Include="Assets\Scripts\Gameplay\StepholderSC.cs" />
     <Compile Include="Assets\Scripts\Backend\Singleton.cs" />
     <Compile Include="Assets\Scripts\Gameplay\AnimalS\PeacockSC.cs" />
     <Compile Include="Assets\Scripts\Gameplay\AnimalS\DragonSC.cs" />
@@ -111,7 +111,6 @@
     <Compile Include="Assets\Scripts\Gameplay\AnimalS\ZebraSC.cs" />
     <Compile Include="Assets\Scripts\Interface\HomeSC.cs" />
     <Compile Include="Assets\Scripts\Interface\CreditSC.cs" />
-    <Compile Include="Assets\Scripts\Gameplay\AnimalFinderSC.cs" />
     <Compile Include="Assets\Scripts\Gameplay\AnimalS\SquirrelSC.cs" />
     <Compile Include="Assets\Scripts\Backend\CloudSC.cs" />
     <Compile Include="Assets\Scripts\Gameplay\AnimalS\FoxSC.cs" />
@@ -123,16 +122,18 @@
     <Compile Include="Assets\Scripts\Backend\TipsList.cs" />
     <Compile Include="Assets\Scripts\Interface\DailyRewardSC.cs" />
     <Compile Include="Assets\Scripts\Gameplay\NoahSC.cs" />
+    <Compile Include="Assets\Scripts\SaveSystem.cs" />
     <Compile Include="Assets\Scripts\Gameplay\AnimalS\CowSC.cs" />
     <Compile Include="Assets\Scripts\Backend\CameraFollowPlayerSC.cs" />
     <Compile Include="Assets\Scripts\Gameplay\AnimalS\TurtleSC.cs" />
-    <Compile Include="Assets\Scripts\Gameplay\TidalWaveSC.cs" />
     <Compile Include="Assets\Scripts\Interface\ShopSC.cs" />
     <Compile Include="Assets\Scripts\Gameplay\AnimalS\GooseSC.cs" />
     <Compile Include="Assets\Scripts\Backend\SoundSC.cs" />
     <Compile Include="Assets\Scripts\TutorialSC.cs" />
     <Compile Include="Assets\Scripts\Interface\PromotionSC.cs" />
-    <Compile Include="Assets\Scripts\Gameplay\ArcadeJumpSC.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\AddressableAssetsData\link.xml" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -975,8 +976,16 @@
       <HintPath>Library\ScriptAssemblies\Unity.AI.Navigation.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Unity.ResourceManager">
+      <HintPath>Library\ScriptAssemblies\Unity.ResourceManager.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.ScriptableBuildPipeline">
+      <HintPath>Library\ScriptAssemblies\Unity.ScriptableBuildPipeline.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.VisualScripting.Shared.Editor">
@@ -1011,6 +1020,10 @@
       <HintPath>Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Unity.Localization.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Localization.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.VisualScripting.Flow.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll</HintPath>
       <Private>False</Private>
@@ -1035,6 +1048,10 @@
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Unity.Addressables.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Addressables.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.PlasticSCM.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
       <Private>False</Private>
@@ -1045,6 +1062,10 @@
     </Reference>
     <Reference Include="Unity.VisualScripting.State.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Localization">
+      <HintPath>Library\ScriptAssemblies\Unity.Localization.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
@@ -1075,8 +1096,16 @@
       <HintPath>Library\ScriptAssemblies\Unity.AI.Navigation.Editor.ConversionSystem.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Unity.ScriptableBuildPipeline.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.ScriptableBuildPipeline.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Addressables">
+      <HintPath>Library\ScriptAssemblies\Unity.Addressables.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>

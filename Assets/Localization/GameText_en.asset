@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: GameText_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 8f7401d6d75f94447a9597f0acf763a2, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 1908776071168
+    m_Localized: THANK YOU LETTER
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2146014294016
+    m_Localized: "THANKS FOR PLAY OUR GAME!\r\nYOU MAY SEE THIS GAME IS NOT IN THE
+      BEST CONDITION YET, BUT WE ALWAYS TRY TO IMPROVE OUR STUFF.\r\nSO, IF YOU SEE
+      ANY ERROR OR NOT USER FRIENDLY, PLEASE LET US KNOW TO IMPROVE IT.\r\nONCE AGAIN.
+      \nTHANSK FOR CHOOSING US."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3820997013504
+    m_Localized: RATE OUR GAME!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4130305961984
+    m_Localized: 'LIKE THIS GAME?
+
+      PLEASE RATE US'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6326376427520
+    m_Localized: SETTING
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6776853065728
+    m_Localized: READ ME
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7005828509696
+    m_Localized: CREDITS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7313593954304
+    m_Localized: PAUSE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7561196302336
+    m_Localized: RESUME
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7699008548864
+    m_Localized: TO HOME
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8347296952320
+    m_Localized: LOSE
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

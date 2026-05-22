@@ -34,13 +34,9 @@ public class HomeSC : MonoBehaviour
     {
         genCtrl.ShowAchievement(true);
     }
-    public void OnShowTutorial()
-    {
-        genCtrl.ShowTutorial(true);
-    }
     public void HandleHomeUIs()
     {
-        pCurrency = data.pTotalScore;
+        pCurrency = data.pCoin;
         pGems = data.pGems;
 
         curretScore.text = pCurrency.ToString();

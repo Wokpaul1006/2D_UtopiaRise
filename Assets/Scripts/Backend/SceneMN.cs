@@ -21,15 +21,7 @@ public class SceneMN : MonoBehaviour
                 break;
             case 2:
                 //Utopia Jump Scene
-                SceneManager.LoadScene("02_UtopiaChase");
-                break;
-            case 3:
-                //Ark Makig Scene
                 SceneManager.LoadScene("03_ArkMaking");
-                break;
-            case 4:
-                //Animal Secure Scene
-                SceneManager.LoadScene("04_AnimalSecure");
                 break;
         }
     }

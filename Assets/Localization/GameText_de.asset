@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: GameText_de
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: de
+  m_SharedData: {fileID: 11400000, guid: 8f7401d6d75f94447a9597f0acf763a2, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 1908776071168
+    m_Localized: DANKESSCHREIBEN
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2146014294016
+    m_Localized: "Vielen Dank, dass Sie unser Spiel gespielt haben!\r\nDieses Spiel
+      ist vielleicht noch nicht perfekt, aber wir arbeiten st\xE4ndig an Verbesserungen.\r\nSollten
+      Sie Fehler entdecken oder etwas nicht benutzerfreundlich finden, teilen Sie
+      uns dies bitte mit, damit wir es beheben k\xF6nnen.\r\nNochmals vielen Dank,
+      dass Sie sich f\xFCr uns entschieden haben."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3820997013504
+    m_Localized: BEWERTEN SIE UNSER SPIEL!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4130305961984
+    m_Localized: "Gef\xE4llt dir dieses Spiel? \nDann bewerte uns bitte!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6326376427520
+    m_Localized: EINSTELLUNG
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6776853065728
+    m_Localized: Lies mich
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7005828509696
+    m_Localized: CREDITS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7313593954304
+    m_Localized: PAUSE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7561196302336
+    m_Localized: WIEDER AUFNEHMEN
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7699008548864
+    m_Localized: ZUR STARTSEITE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8347296952320
+    m_Localized: VERLIEREN
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

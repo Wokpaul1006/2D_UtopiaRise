@@ -5,7 +5,7 @@ using UnityEngine;
 public class LoseSC : MonoBehaviour
 {
     GeneralContrlSC genCtrl;
-    private ArcadeJumpSC gamectr;
+    ArkMakingMNSC gameCtr;
     void Start()
     {
         genCtrl = GameObject.Find("CAN_GenControl").GetComponent<GeneralContrlSC>();

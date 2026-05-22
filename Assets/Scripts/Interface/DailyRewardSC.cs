@@ -11,8 +11,7 @@ public class DailyRewardSC : MonoBehaviour
     [SerializeField] List<GameObject> rewardDailyLocker = new List<GameObject>();
     [HideInInspector] HomeSC menu;
     [SerializeField] List<GameObject> dailyGrid = new List<GameObject>();
-
-    [SerializeField] Button claimDailyBtn;
+    [SerializeField] List<Button> butnList = new List<Button>();
 
     private const string LastPatrolTimeKey = "LastPatrolTime";
     private const string PatrolStreakKey = "PatrolStreak";
@@ -41,39 +40,88 @@ public class DailyRewardSC : MonoBehaviour
     #region Handle Claim Daily
     void ShowRewardDaily()
     {
-        if (genCtr.toDay != data.pLastDailyClaim)
+        void ShowRewardDaily()
         {
-            print("in enable button");
-            claimDailyBtn.GetComponent<Button>().interactable = true;
-            if (streakDaily >= 1 && streakDaily < 8)
+            if (data.pLastDailyClaim == "")
             {
-                for (int i = 0; i <= streakDaily - 1; i++)
-                {
-                    rewardDailyLocker[i].gameObject.SetActive(false);
-                }
+                //First day of play
                 isAllowDailyClaim = true;
+                for (int i = 0; i < butnList.Count; i++)
+                {
+                    butnList[i].GetComponent<Button>().interactable = false;
+                }
+                butnList[0].GetComponent<Button>().interactable = true;
             }
-        }
-        else if (genCtr.toDay == data.pLastDailyClaim)
-        {
-            print("in disable button");
-            isAllowDailyClaim = false;
-            claimDailyBtn.GetComponent<Button>().interactable = false;
+            else
+            {
+                if (genCtr.toDay != data.pLastDailyClaim)
+                {
+                    //New day access + unclaimed
+                    for (int i = 0; i < butnList.Count; i++)
+                    {
+                        butnList[streakDaily].GetComponent<Button>().interactable = false;
+                    }
+
+                    if (streakDaily >= 1 && streakDaily < 8)
+                    {
+                        //Lock previous day claim buttons
+                        for (int i = 0; i < streakDaily; i++)
+                        {
+                            butnList[i].GetComponent<Button>().interactable = false;
+                        }
+
+                        for (int j = streakDaily + 1; j > butnList.Count; j++)
+                        {
+                            butnList[j].GetComponent<Button>().interactable = false;
+                        }
+                        butnList[streakDaily].GetComponent<Button>().interactable = true;
+
+                        isAllowDailyClaim = false;
+                    }
+                }
+                else if (genCtr.toDay == data.pLastDailyClaim)
+                {
+                    if (data.pAllowClaimDaily == 1)
+                    {
+                        //Same day access + claimed
+                        isAllowDailyClaim = false;
+                        for (int i = 0; i < butnList.Count; i++)
+                        {
+                            butnList[i].GetComponent<Button>().interactable = false;
+                        }
+                    }
+                    else if (data.pAllowClaimDaily == 0)
+                    {
+                        //Same day, unclaimed
+                        isAllowDailyClaim = true;
+                        for (int i = 0; i < butnList.Count; i++)
+                        {
+                            butnList[i].GetComponent<Button>().interactable = false;
+                        }
+                        butnList[streakDaily].GetComponent<Button>().interactable = true; //Enable only able-to-claim button
+                    }
+                }
+            }
         }
     }
     public void OnClaimDaily()
     {
         int tempFinalScoreToOverride;
         SelectRewardDaily();
-        print("baseReward = " + baseReward);
-        tempFinalScoreToOverride = baseReward + data.pTotalScore;
-        data.UpdateTotalScore(tempFinalScoreToOverride); // Update score
-        streakDaily++;
-        data.UpdateStreak(1, streakDaily); //Update streak
+        butnList[streakDaily].GetComponent<Button>().interactable = false;
         lastCollectDay = DateTime.Today.Day.ToString();
-        data.UpdatePatrolDailyReward(lastCollectDay); //Update last collect day
         isAllowDailyClaim = false;
+        tempFinalScoreToOverride = rewardToGive;
+        streakDaily++;
+        data.UpdateAllowClaimDaily(1);
+
+        print("tempFinalScoreToOverride = " + tempFinalScoreToOverride);
+
+        data.UpdateTotalScore(tempFinalScoreToOverride); // Update score
+        data.UpdateStreak( streakDaily); //Update streak
+        data.UpdatePatrolDailyReward(lastCollectDay); //Update last collect day
         ShowRewardDaily();
+        genCtr.UpdateUI();
     }
     private void SelectRewardDaily()
     {

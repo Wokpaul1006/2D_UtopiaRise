@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class PauseSC : Singleton<PauseSC>
 {
     GeneralContrlSC genCtrl;
-    private ArcadeJumpSC gamectr;
+    private ArkMakingMNSC gamectr;
     void Start()
     {
         genCtrl = GameObject.Find("CAN_GenControl").GetComponent<GeneralContrlSC>();

@@ -19,7 +19,6 @@ public class WoodSC : MonoBehaviour
     {
         if(collision.gameObject.tag == "Noah")
         {
-            cutwoodMn.IncreaseScore();
             Destroy(gameObject);
         }
     }

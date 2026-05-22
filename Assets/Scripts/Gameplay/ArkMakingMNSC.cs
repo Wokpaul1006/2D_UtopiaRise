@@ -7,8 +7,10 @@ public class ArkMakingMNSC : MonoBehaviour
 {
     [HideInInspector] GeneralContrlSC genCtrl;
     [HideInInspector] CameraFollowPlayerSC camFollow;
-    [SerializeField] Text currentScoreTxt, currentLvlTxt, timeCountdownTxt, goalTxt;
-    [SerializeField] TidalWaveSC theTide;
+    [HideInInspector] DataSC dataCtr;
+
+    [SerializeField] Text woodsAmountTxt, ironAmountsTxt, stoneAmountsTxt, fruitAmountsTxt, cropAmountsTxt, moneyAmountsTxt;
+
     [SerializeField] NoahSC player;
     [SerializeField] GameObject theMap, treeA, treeB;
 
@@ -17,90 +19,66 @@ public class ArkMakingMNSC : MonoBehaviour
     //Gameplay Control variables
     [HideInInspector]
     public bool isGameStart; //Use for detech game start and pauise even
-    private int curScore; //Current wood collected
+    private int woodAmount, ironAmount, stoneAmount, fruistAmount, cropAmount, moneyAmount;
+    private int treeOnScreenCapacity;
+    public int curTreeOnScreen;
     [HideInInspector]
-    public int curLv; //Current Level of Player ingame
-    private int countdownTime; //Time limit of player
-    private int curGoal; //Goal player must reach, caculating each time level up;
     private int randTreeToSpawn;
     //Collect Item Mode
     void Start()
     {
         genCtrl = GameObject.Find("CAN_GenControl").GetComponent<GeneralContrlSC>();
         camFollow = GameObject.Find("CAM_Follow").GetComponent<CameraFollowPlayerSC>();
+        dataCtr = GameObject.Find("CAN_GenControl").GetComponent<DataSC>();
         isGameStart = false;
-        curScore = 0;
-        curLv = curGoal = 1;
-        countdownTime = 60;
         deviceType = genCtrl.deviceType;
+        curTreeOnScreen = 0;
+        treeOnScreenCapacity = 100;
         genCtrl.AssitsGamemode(3);
-        OnHandleUIs();
+        GetPlayerDatas();
         OnInitMap();
     }
 
-    // Update is called once per frame
-    void Update() 
+    private void GetPlayerDatas()
     {
+        woodAmount = dataCtr.pWoods;
+        ironAmount = dataCtr.pIron;
+        stoneAmount = dataCtr.pStone;
+        fruistAmount = dataCtr.pFruits;
+        cropAmount = dataCtr.pCrop;
+        moneyAmount = dataCtr.pCoin;
 
+        OnHandleUIs();
     }
 
     #region Handle Gameplay
-    private void CountdonwDecrease()
-    {
-        if (isGameStart == true)
-        {
-            countdownTime--;
-            if (countdownTime <= 0)
-            {
-                isGameStart = false;
-                OnLoose();
-                //Update score
-            }
-            OnHandleCountdown(countdownTime);
-        }      
-    }
     private void OnInitMap()
     {
-        theMap = Instantiate(theMap, Vector3.zero, Quaternion.identity);
+        //theMap = Instantiate(theMap, Vector3.zero, Quaternion.identity);
         player = Instantiate(player, Vector3.zero, Quaternion.identity);
         camFollow.AssistCamFollowCutWood(player);
-        theTide = Instantiate(theTide, new Vector3(-12, 0, 0), Quaternion.identity);
         isGameStart = true;
         InvokeRepeating(nameof(SpawnTree), 0f, 2);
-        InvokeRepeating(nameof(CountdonwDecrease), 0f, 1f);
     }
     private void SpawnTree()
     {
         if(isGameStart == true)
         {
-            randTreeToSpawn = Random.Range(0, 2);
-            Vector3 randPos;
-            randPos.x = Random.Range(player.transform.position.x - 5, player.transform.position.x + 5);
-            randPos.y = Random.Range(player.transform.position.y - 5, player.transform.position.y + 5);
-            if(randTreeToSpawn == 0)    Instantiate(treeA, new Vector3(randPos.x, randPos.y, 0), Quaternion.identity);
-            else if(randTreeToSpawn != 0)   Instantiate(treeB, new Vector3(randPos.x, randPos.y, 0), Quaternion.identity);
+            if(curTreeOnScreen <= treeOnScreenCapacity)
+            {
+                randTreeToSpawn = Random.Range(0, 2);
+                Vector3 randPos;
+                randPos.x = Random.Range(player.transform.position.x - 5, player.transform.position.x + 5);
+                randPos.y = Random.Range(player.transform.position.y - 5, player.transform.position.y + 5);
+                int tempAmountTreeToSpawn = Random.Range(1, 10);
+                for (int i = 0; i < tempAmountTreeToSpawn; i++)
+                {
+                    curTreeOnScreen++;
+                    if (randTreeToSpawn == 0) Instantiate(treeA, new Vector3(randPos.x + (i / 10), randPos.y, 0), Quaternion.identity);
+                    else if (randTreeToSpawn != 0) Instantiate(treeB, new Vector3(randPos.x + (i / 5), randPos.y, 0), Quaternion.identity);
+                }
+            }
         }
-    }
-    public void IncreaseScore()
-    {
-        curScore++;
-        if(curScore >= curGoal)
-        {
-            curLv++;
-            int tempCurSecond;
-            tempCurSecond = countdownTime;
-            countdownTime = tempCurSecond + 60;
-
-            int tempNewGoal;
-            tempNewGoal = curLv * curGoal;
-            curGoal = tempNewGoal;
-            theTide.ResetPos();
-        }
-        OnHandleUIs();
-    }
-    public void OnUpdatePlayerScore()
-    {
-        genCtrl.OnUpdatePlayerInformationAfterGames(curScore);
     }
     #endregion
 
@@ -108,13 +86,12 @@ public class ArkMakingMNSC : MonoBehaviour
     #region Handle UI events
     private void OnHandleUIs()
     {
-        currentScoreTxt.text = curScore.ToString() ;
-        currentLvlTxt.text = curLv.ToString();
-        goalTxt.text = curGoal.ToString();
-    }
-    private void OnHandleCountdown(int a)
-    {
-        timeCountdownTxt.text = a.ToString() + "s";
+        woodsAmountTxt.text = woodAmount.ToString();
+        ironAmountsTxt.text = ironAmount.ToString();
+        stoneAmountsTxt.text = stoneAmount.ToString();
+        cropAmountsTxt.text = cropAmount.ToString();
+        fruitAmountsTxt.text = fruistAmount.ToString();
+        moneyAmountsTxt.text = moneyAmount.ToString();
     }
     public void OnPause()
     {
@@ -125,7 +102,6 @@ public class ArkMakingMNSC : MonoBehaviour
     public void OnLoose()
     {
         isGameStart = false;
-        OnUpdatePlayerScore();
         genCtrl.ShowLose(true);
     }
     #endregion

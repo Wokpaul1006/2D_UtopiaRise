@@ -13,18 +13,17 @@ public class GeneralContrlSC : Singleton<GeneralContrlSC>
     [HideInInspector] ShopSC shopCtr;
     [HideInInspector] SoundSC sfxMuzik;
     [HideInInspector] MainThemeSC mainthemMuzik;
-    [HideInInspector] ArcadeJumpSC arcadeCtr;
     [HideInInspector] ArkMakingMNSC cutwoodCtr;
-    [HideInInspector] AnimalFinderSC animalSaver;
     [HideInInspector] CreditSC creditPnl;
     [HideInInspector] RatingSC reatingPnl;
     [HideInInspector] SceneMN sceneCtr;
-    [HideInInspector] GameObject readmePnl, tutotialPnl;
+    [HideInInspector] GameObject readmePnl;
     [HideInInspector] LeaderSC leaderPnl;
     [HideInInspector] AchievementSC achievePnl;
     [HideInInspector] DataSC data;
     [HideInInspector] PromotionSC promoPNl;
     [SerializeField] AdsMN adsMN;
+    [SerializeField] HomeSC home;
 
     public string toDay;
     public int gameMode, deviceType, genThemeAllow, genSFXAllow;
@@ -54,8 +53,7 @@ public class GeneralContrlSC : Singleton<GeneralContrlSC>
         readmePnl = GameObject.Find("PNL_ReadMe");
         leaderPnl = GameObject.Find("PNL_Leaderboard").GetComponent<LeaderSC>();
         achievePnl = GameObject.Find("PNL_Achievement").GetComponent<AchievementSC>();
-        promoPNl = GameObject.Find("PNL_Leaderboard").GetComponent<PromotionSC>();
-        tutotialPnl = GameObject.Find("PNL_Tutorial");
+        promoPNl = GameObject.Find("PNL_Promo").GetComponent<PromotionSC>();
         sfxMuzik = GameObject.Find("OBJ_SoundControl").GetComponent<SoundSC>();
         mainthemMuzik = GameObject.Find("OBJ_SoundControl").GetComponent<MainThemeSC>();
         sceneCtr = GameObject.Find("CAN_GenControl").GetComponent<SceneMN>();
@@ -77,7 +75,6 @@ public class GeneralContrlSC : Singleton<GeneralContrlSC>
     public void ShowRating(bool isShow) => reatingPnl.gameObject.SetActive(isShow);
     public void ShowAchievement(bool isShow) => achievePnl.gameObject.SetActive(isShow);
     public void ShowLeader(bool isShow) => leaderPnl.gameObject.SetActive(isShow);
-    public void ShowTutorial(bool isShow) => tutotialPnl.gameObject.SetActive(isShow);
     public void ShowPromo(bool isShow) => promoPNl.gameObject.SetActive(isShow);
     #endregion
 
@@ -118,7 +115,7 @@ public class GeneralContrlSC : Singleton<GeneralContrlSC>
     }
     public void UpdateUI()
     {
-        arcadeCtr.HandleUIs();
+        home.HandleHomeUIs();
     }
     private void HideAllPanel()
     {
@@ -134,7 +131,6 @@ public class GeneralContrlSC : Singleton<GeneralContrlSC>
         ShowReward(false);
         ShowAchievement(false);
         ShowLeader(false);
-        ShowTutorial(false);
         ShowSetting(false);
         ShowPromo(false);
     }
@@ -145,21 +141,7 @@ public class GeneralContrlSC : Singleton<GeneralContrlSC>
     }
     public void AssitsGamemode(int a)
     {
-        switch (a)
-        {
-            case 1:
-                //Home
-                break;
-            case 2:
-                arcadeCtr = GameObject.Find("CAN_UtopiaJump").GetComponent<ArcadeJumpSC>();
-                break;
-            case 3:
-                cutwoodCtr = GameObject.Find("CAN_ArkMaking").GetComponent<ArkMakingMNSC>();
-                break;
-            case 4:
-                animalSaver = GameObject.Find("CAN_AnimalSecure").GetComponent<AnimalFinderSC>();
-                break;
-        }
+        cutwoodCtr = GameObject.Find("CAN_ArkMaking").GetComponent<ArkMakingMNSC>();
     }
 
     #region Handle Loose Events
@@ -170,19 +152,17 @@ public class GeneralContrlSC : Singleton<GeneralContrlSC>
         if(adsInterCount >= targetIntersAdsCount)
         {
             adsMN.ShowAds(1);
-            sceneCtr.OnLoadScene(1);
+            sceneCtr.OnLoadScene(2);
             adsInterCount = 0;
         }else if(adsInterCount < targetIntersAdsCount)
         {
-            sceneCtr.OnLoadScene(1);
+            sceneCtr.OnLoadScene(2);
         }
     }
     public void OnReplay()
     {
         //Load Reward
         if(gameMode == 2) sceneCtr.OnLoadScene(2);
-        else if (gameMode == 3) sceneCtr.OnLoadScene(3);
-        else if (gameMode == 4) sceneCtr.OnLoadScene(4);
     }
     public void OnExistGame()
     {
@@ -201,16 +181,7 @@ public class GeneralContrlSC : Singleton<GeneralContrlSC>
     }
     public void OnResumeGame()
     {
-        if(gameMode == 3)
-        {
-            cutwoodCtr.isGameStart = true;
-        }else if(gameMode == 2)
-        {
-            arcadeCtr.isGameStart = true;
-        }else if(gameMode == 4)
-        {
-            animalSaver.isGameStart = true;
-        }
+        cutwoodCtr.isGameStart = true;
         ShowPause(false);
     }
     public void OnUpdatePlayerInformationAfterGames(int score)

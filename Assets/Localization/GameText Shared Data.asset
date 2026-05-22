@@ -1,0 +1,84 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: GameText Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: GameText
+  m_TableCollectionNameGuidString: 8f7401d6d75f94447a9597f0acf763a2
+  m_Entries:
+  - m_Id: 1908776071168
+    m_Key: New Entry
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2146014294016
+    m_Key: New Entry 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3820997013504
+    m_Key: New Entry 2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4130305961984
+    m_Key: New Entry 3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6326376427520
+    m_Key: New Entry 4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6776853065728
+    m_Key: New Entry 5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7005828509696
+    m_Key: New Entry 6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7313593954304
+    m_Key: New Entry 7
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7561196302336
+    m_Key: New Entry 8
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7699008548864
+    m_Key: New Entry 9
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8044988297216
+    m_Key: New Entry 11
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8119781126144
+    m_Key: New Entry 13
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8187389112320
+    m_Key: New Entry 12
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8347296952320
+    m_Key: New Entry 10
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 7738210511521316888
+  references:
+    version: 2
+    RefIds:
+    - rid: 7738210511521316888
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1779442829346
