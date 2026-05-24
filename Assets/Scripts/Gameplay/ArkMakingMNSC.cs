@@ -104,6 +104,10 @@ public class ArkMakingMNSC : MonoBehaviour
         isGameStart = false;
         genCtrl.ShowLose(true);
     }
+    public void OnAttack()
+    {
+        player.OnAttack();
+    }
     #endregion
-    
+
 }

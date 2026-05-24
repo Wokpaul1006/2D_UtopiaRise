@@ -18,23 +18,14 @@ public class TreeSC : MonoBehaviour
         noah = GameObject.Find("OBJ_Noah(Clone)").GetComponent<NoahSC>();
         noahPos = noah.transform.position;
     }
-
-    // Update is called once per frame
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
+
         if (collision.gameObject.tag == "Axe")
         {
             print("in hit axe");
+            hitCount++;
             OnHandleChoping();
-        }
-    }
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if(collision.gameObject.tag == "Axe")
-        {
-            print("in exist axe");
-            hitCount = 0;
-            hitDelay = 0;
         }
     }
     private void OnSpawnWood()
@@ -46,8 +37,8 @@ public class TreeSC : MonoBehaviour
     }
     private void OnHandleChoping()
     {
-        hitDelay++;
-        if (hitDelay == 2)
+        print("in handle chopping, hitcoun  = " + hitCount);
+        if (hitCount >= 3)
         {
             OnSpawnWood();
             genCtr.curTreeOnScreen--;

@@ -1,13 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using DG.Tweening;
 public class NoahSC : MonoBehaviour
 {
     [HideInInspector] Joystick joystickCtr;
     [HideInInspector] GeneralContrlSC genCtr;
     [HideInInspector] ArkMakingMNSC cutwoodMn;
-    [SerializeField] Transform axe;
+    [SerializeField] GameObject weapon, curTarget;
     //Gameplay Attributes
     private int deviceType;
     private bool isPause;
@@ -17,6 +17,7 @@ public class NoahSC : MonoBehaviour
     private float moveSpd;
     private float choppingDelay;
     private float axeMoveSpd;
+    Vector3 curTegetPos, originPos;
     void Start()
     {
         moveSpd = 5f;
@@ -26,12 +27,10 @@ public class NoahSC : MonoBehaviour
         genCtr = GameObject.Find("CAN_GenControl").GetComponent<GeneralContrlSC>();
         joystickCtr = GameObject.Find("IMG_JoystickHandle").GetComponent<Joystick>();
         cutwoodMn = GameObject.Find("CAN_ArkMaking").GetComponent<ArkMakingMNSC>();
-        axe = transform.Find("OBJ_Axe");
         deviceType = genCtr.deviceType;
-        //axe.transform.SetParent(gameObject.transform);
+        curTegetPos = originPos = Vector3.zero;
+        curTarget = null;
     }
-
-    // Update is called once per frame
     void Update()
     {
         if(deviceType == 1)
@@ -41,6 +40,21 @@ public class NoahSC : MonoBehaviour
         {
             OnMoveByTouch();
         }
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Tree")
+        {
+            print("in hit tree");
+            curTarget = collision.gameObject;
+            curTegetPos = curTarget.transform.position;
+            print("curTreePos = " + curTegetPos);
+        }
+    }
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        curTarget = null;
+        curTegetPos = Vector3.zero;
     }
 
     private void OnMoveActionKey()
@@ -62,11 +76,6 @@ public class NoahSC : MonoBehaviour
         {
             if (noahDir == 1) { ChangeDir(); }
             transform.position += Vector3.right * Time.deltaTime * moveSpd;
-        }
-        else if(Input.GetKey(KeyCode.Space) == true && !isSpinning)
-        {
-            ///Choppings
-            StartCoroutine(SpinOnce());
         }
     }
     private void OnMoveByTouch()
@@ -92,38 +101,10 @@ public class NoahSC : MonoBehaviour
             gameObject.transform.localScale = new Vector3(prefabCurentScale, prefabCurentScale, prefabCurentScale);
         }
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void OnAttack()
     {
-        if(collision.gameObject.tag == "Tidal") { cutwoodMn.OnLoose(); }
+        originPos = weapon.transform.position;
+        weapon.transform.DOMove(curTegetPos, 2f).SetLoops(2,LoopType.Yoyo);
     }
 
-    #region Axe rotation
-    private bool isSpinning = false;
-    private float spinDuration = 0.3f;
-    IEnumerator SpinOnce()
-    {
-        isSpinning = true;
-
-        float elapsed = 0f;
-        float totalRotation = 360f;
-
-        Quaternion startRot = axe.localRotation;
-        Quaternion endRot = startRot * Quaternion.Euler(0f, 0f, totalRotation);
-
-        print("in rotate axxe");
-
-        while (elapsed < spinDuration)
-        {
-            print("in elapse < spinDuration");
-            elapsed += Time.deltaTime;
-            float t = elapsed / spinDuration;
-            axe.localRotation = Quaternion.Slerp(startRot, endRot, t);
-            yield return null;
-        }
-
-        axe.localRotation = endRot;
-        isSpinning = false;
-        print("spin complete");
-    }
-    #endregion
 }
