@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6297397862948636623}
   - component: {fileID: 88963618066650006}
   - component: {fileID: 401180747340107073}
-  - component: {fileID: 3855981205233173322}
+  - component: {fileID: 5734952978455518559}
   m_Layer: 0
   m_Name: OBJ_Ox
   m_TagString: Untagged
@@ -30,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -143,7 +143,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -159,7 +159,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.56, y: 2.23}
   m_EdgeRadius: 0
---- !u!114 &3855981205233173322
+--- !u!114 &5734952978455518559
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -168,7 +168,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 3447244135113411252}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b6e896b6c8f832438f1caac3dd6c237, type: 3}
+  m_Script: {fileID: 11500000, guid: e7b82c4b830acfb459902422f44cf9ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animalCtr: {fileID: 0}

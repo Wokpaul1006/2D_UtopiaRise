@@ -65,6 +65,7 @@
     <Compile Include="Assets\Scripts\Interface\WoodSC.cs" />
     <Compile Include="Assets\Scripts\Gameplay\AnimalS\OstrictSC.cs" />
     <Compile Include="Assets\Scripts\Gameplay\AnimalS\HenSC.cs" />
+    <Compile Include="Assets\Scripts\OxSC.cs" />
     <Compile Include="Assets\Scripts\Gameplay\AnimalS\RabbitSC.cs" />
     <Compile Include="Assets\Scripts\Gameplay\AnimalS\TurkeySC.cs" />
     <Compile Include="Assets\Scripts\Gameplay\AnimalS\CrabSC.cs" />

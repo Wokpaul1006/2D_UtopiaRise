@@ -64,7 +64,7 @@ public class ArkMakingMNSC : MonoBehaviour
         camFollow.AssistCamFollowCutWood(player);
         isGameStart = true;
         LoadTownOnPlay(); //Load town
-        InvokeRepeating(nameof(SpawnTree), 0f, 2);
+        InvokeRepeating(nameof(SpawnTree), 0f, 4);
         InvokeRepeating(nameof(OnHandleInitAnimal), 0f, 10f);
     }
     private void OnHandleInitAnimal()
@@ -108,15 +108,18 @@ public class ArkMakingMNSC : MonoBehaviour
             {
                 randTreeToSpawn = Random.Range(0, 2);
                 Vector3 randPos;
-                randPos.x = Random.Range(player.transform.position.x - 5, player.transform.position.x + 5);
-                randPos.y = Random.Range(player.transform.position.y - 5, player.transform.position.y + 5);
-                int tempAmountTreeToSpawn = Random.Range(1, 10);
-                for (int i = 0; i < tempAmountTreeToSpawn; i++)
+                do
                 {
-                    curTreeOnScreen++;
-                    if (randTreeToSpawn == 0) Instantiate(treeA, new Vector3(randPos.x + (i / 10), randPos.y, 0), Quaternion.identity);
-                    else if (randTreeToSpawn != 0) Instantiate(treeB, new Vector3(randPos.x + (i / 5), randPos.y, 0), Quaternion.identity);
-                }
+                    randPos.x = Random.Range(player.transform.position.x - 5, player.transform.position.x + 5);
+                }while(randPos.x > -5 && randPos.x < 5);
+                do
+                {
+                    randPos.y = Random.Range(player.transform.position.y - 5, player.transform.position.y + 5);
+                } while (randPos.y > -5 && randPos.y < 5);
+                curTreeOnScreen++;
+                if (randTreeToSpawn == 0) Instantiate(treeA, new Vector3(randPos.x , randPos.y, 0), Quaternion.identity);
+                else if (randTreeToSpawn != 0) Instantiate(treeB, new Vector3(randPos.x, randPos.y, 0), Quaternion.identity);
+
             }
         }
     }
@@ -126,8 +129,7 @@ public class ArkMakingMNSC : MonoBehaviour
         do
         {
             randPosX = Random.Range(-60, 60);
-
-
+            
         } while (randPosX > -10 && randPosX < 10);
         do
         {
