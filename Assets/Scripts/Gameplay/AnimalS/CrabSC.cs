@@ -6,7 +6,8 @@ public class CrabSC : AnimalSC
 {
     void Start()
     {
-        animalName = this.name;
         base.Start();
+        isPredators = false;
+        nutritionAmount = 20;
     }
 }

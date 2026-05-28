@@ -3,40 +3,148 @@
   "WorkspaceRootPath": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8D441CA3-1174-F173-403B-828254534012}|Assembly-CSharp.csproj|d:\\projects\\2d project - sdcasual\\2d_utopiarise\\assets\\scripts\\gameplay\\noahsc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8D441CA3-1174-F173-403B-828254534012}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gameplay\\noahsc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8D441CA3-1174-F173-403B-828254534012}|Assembly-CSharp.csproj|D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\assets\\scripts\\treesc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8D441CA3-1174-F173-403B-828254534012}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\treesc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8D441CA3-1174-F173-403B-828254534012}|Assembly-CSharp.csproj|D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\assets\\scripts\\gameplay\\arkmakingmnsc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8D441CA3-1174-F173-403B-828254534012}|Assembly-CSharp.csproj|d:\\projects\\2d project - sdcasual\\2d_utopiarise\\assets\\scripts\\gameplay\\arkmakingmnsc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8D441CA3-1174-F173-403B-828254534012}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gameplay\\arkmakingmnsc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8D441CA3-1174-F173-403B-828254534012}|Assembly-CSharp.csproj|D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\assets\\scripts\\joystick.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8D441CA3-1174-F173-403B-828254534012}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\joystick.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8D441CA3-1174-F173-403B-828254534012}|Assembly-CSharp.csproj|D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\assets\\scripts\\gameplay\\animals\\dogsc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D441CA3-1174-F173-403B-828254534012}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gameplay\\animals\\dogsc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D441CA3-1174-F173-403B-828254534012}|Assembly-CSharp.csproj|D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\assets\\scripts\\gameplay\\animals\\cricketsc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D441CA3-1174-F173-403B-828254534012}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gameplay\\animals\\cricketsc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D441CA3-1174-F173-403B-828254534012}|Assembly-CSharp.csproj|D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\assets\\scripts\\gameplay\\animals\\crabsc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D441CA3-1174-F173-403B-828254534012}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gameplay\\animals\\crabsc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D441CA3-1174-F173-403B-828254534012}|Assembly-CSharp.csproj|D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\assets\\scripts\\gameplay\\animals\\boarsc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D441CA3-1174-F173-403B-828254534012}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gameplay\\animals\\boarsc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D441CA3-1174-F173-403B-828254534012}|Assembly-CSharp.csproj|D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\assets\\scripts\\gameplay\\animals\\beesc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D441CA3-1174-F173-403B-828254534012}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gameplay\\animals\\beesc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D441CA3-1174-F173-403B-828254534012}|Assembly-CSharp.csproj|D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\assets\\scripts\\gameplay\\generalcontrlsc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D441CA3-1174-F173-403B-828254534012}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gameplay\\generalcontrlsc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D441CA3-1174-F173-403B-828254534012}|Assembly-CSharp.csproj|D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\assets\\scripts\\gameplay\\animals\\zebrasc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D441CA3-1174-F173-403B-828254534012}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gameplay\\animals\\zebrasc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D441CA3-1174-F173-403B-828254534012}|Assembly-CSharp.csproj|D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\assets\\scripts\\interface\\dailyrewardsc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D441CA3-1174-F173-403B-828254534012}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\interface\\dailyrewardsc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D441CA3-1174-F173-403B-828254534012}|Assembly-CSharp.csproj|D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\assets\\scripts\\gameplay\\animals\\turkeysc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D441CA3-1174-F173-403B-828254534012}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gameplay\\animals\\turkeysc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D441CA3-1174-F173-403B-828254534012}|Assembly-CSharp.csproj|D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\assets\\scripts\\gameplay\\animals\\trexsc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D441CA3-1174-F173-403B-828254534012}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gameplay\\animals\\trexsc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D441CA3-1174-F173-403B-828254534012}|Assembly-CSharp.csproj|D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\assets\\scripts\\gameplay\\animals\\sheepsc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D441CA3-1174-F173-403B-828254534012}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gameplay\\animals\\sheepsc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D441CA3-1174-F173-403B-828254534012}|Assembly-CSharp.csproj|D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\assets\\scripts\\gameplay\\animals\\rabbitsc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D441CA3-1174-F173-403B-828254534012}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gameplay\\animals\\rabbitsc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D441CA3-1174-F173-403B-828254534012}|Assembly-CSharp.csproj|D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\assets\\scripts\\gameplay\\animals\\pigsc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D441CA3-1174-F173-403B-828254534012}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gameplay\\animals\\pigsc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D441CA3-1174-F173-403B-828254534012}|Assembly-CSharp.csproj|D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\assets\\scripts\\gameplay\\animals\\ramsc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D441CA3-1174-F173-403B-828254534012}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gameplay\\animals\\ramsc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D441CA3-1174-F173-403B-828254534012}|Assembly-CSharp.csproj|D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\assets\\scripts\\gameplay\\animals\\ostrictsc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D441CA3-1174-F173-403B-828254534012}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gameplay\\animals\\ostrictsc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D441CA3-1174-F173-403B-828254534012}|Assembly-CSharp.csproj|D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\assets\\scripts\\gameplay\\animals\\snakesc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D441CA3-1174-F173-403B-828254534012}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gameplay\\animals\\snakesc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D441CA3-1174-F173-403B-828254534012}|Assembly-CSharp.csproj|D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\assets\\scripts\\gameplay\\animals\\peacocksc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D441CA3-1174-F173-403B-828254534012}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gameplay\\animals\\peacocksc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D441CA3-1174-F173-403B-828254534012}|Assembly-CSharp.csproj|D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\assets\\scripts\\gameplay\\animals\\lionsc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D441CA3-1174-F173-403B-828254534012}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gameplay\\animals\\lionsc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D441CA3-1174-F173-403B-828254534012}|Assembly-CSharp.csproj|D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\assets\\scripts\\gameplay\\animals\\horsesc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D441CA3-1174-F173-403B-828254534012}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gameplay\\animals\\horsesc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D441CA3-1174-F173-403B-828254534012}|Assembly-CSharp.csproj|D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\assets\\scripts\\gameplay\\animals\\hensc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D441CA3-1174-F173-403B-828254534012}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gameplay\\animals\\hensc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D441CA3-1174-F173-403B-828254534012}|Assembly-CSharp.csproj|D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\assets\\scripts\\gameplay\\animals\\koalasc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D441CA3-1174-F173-403B-828254534012}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gameplay\\animals\\koalasc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D441CA3-1174-F173-403B-828254534012}|Assembly-CSharp.csproj|D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\assets\\scripts\\gameplay\\animals\\hedgehogsc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D441CA3-1174-F173-403B-828254534012}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gameplay\\animals\\hedgehogsc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D441CA3-1174-F173-403B-828254534012}|Assembly-CSharp.csproj|D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\assets\\scripts\\gameplay\\animals\\goosesc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D441CA3-1174-F173-403B-828254534012}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gameplay\\animals\\goosesc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D441CA3-1174-F173-403B-828254534012}|Assembly-CSharp.csproj|D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\assets\\scripts\\gameplay\\animals\\giraffsc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D441CA3-1174-F173-403B-828254534012}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gameplay\\animals\\giraffsc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D441CA3-1174-F173-403B-828254534012}|Assembly-CSharp.csproj|D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\assets\\scripts\\gameplay\\animals\\foxsc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D441CA3-1174-F173-403B-828254534012}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gameplay\\animals\\foxsc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8D441CA3-1174-F173-403B-828254534012}|Assembly-CSharp.csproj|D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\assets\\scripts\\gameplay\\animals\\animalsc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8D441CA3-1174-F173-403B-828254534012}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gameplay\\animals\\animalsc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\Gameplay\\ArkSC.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Gameplay\\ArkSC.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8D441CA3-1174-F173-403B-828254534012}|Assembly-CSharp.csproj|D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\assets\\scripts\\gameplay\\noahsc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D441CA3-1174-F173-403B-828254534012}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gameplay\\noahsc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\Gameplay\\StepholderSC.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Gameplay\\StepholderSC.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8D441CA3-1174-F173-403B-828254534012}|Assembly-CSharp.csproj|D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\assets\\scripts\\stoneminesc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D441CA3-1174-F173-403B-828254534012}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\stoneminesc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8D441CA3-1174-F173-403B-828254534012}|Assembly-CSharp.csproj|D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\assets\\scripts\\interface\\losesc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8D441CA3-1174-F173-403B-828254534012}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\interface\\losesc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8D441CA3-1174-F173-403B-828254534012}|Assembly-CSharp.csproj|D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\assets\\scripts\\interface\\shopsc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D441CA3-1174-F173-403B-828254534012}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\interface\\shopsc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8D441CA3-1174-F173-403B-828254534012}|Assembly-CSharp.csproj|D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\assets\\scripts\\backend\\pausesc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8D441CA3-1174-F173-403B-828254534012}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\backend\\pausesc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8D441CA3-1174-F173-403B-828254534012}|Assembly-CSharp.csproj|D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\assets\\scripts\\ironminessc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D441CA3-1174-F173-403B-828254534012}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ironminessc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D441CA3-1174-F173-403B-828254534012}|Assembly-CSharp.csproj|D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\assets\\scripts\\interface\\joystick.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D441CA3-1174-F173-403B-828254534012}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\interface\\joystick.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|d:\\projects\\2d project - sdcasual\\2d_utopiarise\\assets\\scripts\\gameplay\\animals\\snailsc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:assets\\scripts\\gameplay\\animals\\snailsc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\assets\\scripts\\gameplay\\animals\\landturtlesc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:assets\\scripts\\gameplay\\animals\\landturtlesc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|d:\\projects\\2d project - sdcasual\\2d_utopiarise\\assets\\scripts\\gameplay\\animals\\squirrelsc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:assets\\scripts\\gameplay\\animals\\squirrelsc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|d:\\projects\\2d project - sdcasual\\2d_utopiarise\\assets\\scripts\\gameplay\\animals\\walrussc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:assets\\scripts\\gameplay\\animals\\walrussc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,7 +154,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 35,
           "Children": [
             {
               "$type": "Bookmark",
@@ -54,112 +162,436 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "NoahSC.cs",
-              "DocumentMoniker": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\Gameplay\\NoahSC.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Gameplay\\NoahSC.cs",
-              "ToolTip": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\Gameplay\\NoahSC.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Gameplay\\NoahSC.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAA5wDgAAAAjAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "DogSC.cs",
+              "DocumentMoniker": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\Gameplay\\AnimalS\\DogSC.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Gameplay\\AnimalS\\DogSC.cs",
+              "ToolTip": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\Gameplay\\AnimalS\\DogSC.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Gameplay\\AnimalS\\DogSC.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-23T10:02:40.593Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-28T11:56:07.68Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CricketSC.cs",
+              "DocumentMoniker": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\Gameplay\\AnimalS\\CricketSC.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Gameplay\\AnimalS\\CricketSC.cs",
+              "ToolTip": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\Gameplay\\AnimalS\\CricketSC.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Gameplay\\AnimalS\\CricketSC.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-28T11:55:41.127Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Joystick.cs",
-              "DocumentMoniker": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\Joystick.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Joystick.cs",
-              "ToolTip": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\Joystick.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Joystick.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAAACcAAAAFAAAAAAAAAA==",
+              "Title": "CrabSC.cs",
+              "DocumentMoniker": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\Gameplay\\AnimalS\\CrabSC.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Gameplay\\AnimalS\\CrabSC.cs",
+              "ToolTip": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\Gameplay\\AnimalS\\CrabSC.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Gameplay\\AnimalS\\CrabSC.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-20T19:07:26.768Z"
+              "WhenOpened": "2026-05-28T11:55:11.899Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "BoarSC.cs",
+              "DocumentMoniker": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\Gameplay\\AnimalS\\BoarSC.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Gameplay\\AnimalS\\BoarSC.cs",
+              "ToolTip": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\Gameplay\\AnimalS\\BoarSC.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Gameplay\\AnimalS\\BoarSC.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-28T11:54:30.232Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "BeeSC.cs",
+              "DocumentMoniker": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\Gameplay\\AnimalS\\BeeSC.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Gameplay\\AnimalS\\BeeSC.cs",
+              "ToolTip": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\Gameplay\\AnimalS\\BeeSC.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Gameplay\\AnimalS\\BeeSC.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-28T11:53:59.87Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ZebraSC.cs",
+              "DocumentMoniker": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\Gameplay\\AnimalS\\ZebraSC.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Gameplay\\AnimalS\\ZebraSC.cs",
+              "ToolTip": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\Gameplay\\AnimalS\\ZebraSC.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Gameplay\\AnimalS\\ZebraSC.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-28T11:38:27.71Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "DailyRewardSC.cs",
+              "DocumentMoniker": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\Interface\\DailyRewardSC.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Interface\\DailyRewardSC.cs",
+              "ToolTip": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\Interface\\DailyRewardSC.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Interface\\DailyRewardSC.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAQwCoAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-28T11:38:19.132Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "WalrusSC.cs",
+              "DocumentMoniker": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\Gameplay\\AnimalS\\WalrusSC.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Gameplay\\AnimalS\\WalrusSC.cs",
+              "ToolTip": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\Gameplay\\AnimalS\\WalrusSC.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Gameplay\\AnimalS\\WalrusSC.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-28T11:38:11.08Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "TurkeySC.cs",
+              "DocumentMoniker": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\Gameplay\\AnimalS\\TurkeySC.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Gameplay\\AnimalS\\TurkeySC.cs",
+              "ToolTip": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\Gameplay\\AnimalS\\TurkeySC.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Gameplay\\AnimalS\\TurkeySC.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-28T11:37:58.012Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "SquirrelSC.cs",
+              "DocumentMoniker": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\Gameplay\\AnimalS\\SquirrelSC.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Gameplay\\AnimalS\\SquirrelSC.cs",
+              "ToolTip": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\Gameplay\\AnimalS\\SquirrelSC.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Gameplay\\AnimalS\\SquirrelSC.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-28T11:37:45.765Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "TrexSC.cs",
+              "DocumentMoniker": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\Gameplay\\AnimalS\\TrexSC.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Gameplay\\AnimalS\\TrexSC.cs",
+              "ToolTip": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\Gameplay\\AnimalS\\TrexSC.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Gameplay\\AnimalS\\TrexSC.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-28T11:37:31.597Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "SheepSC.cs",
+              "DocumentMoniker": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\Gameplay\\AnimalS\\SheepSC.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Gameplay\\AnimalS\\SheepSC.cs",
+              "ToolTip": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\Gameplay\\AnimalS\\SheepSC.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Gameplay\\AnimalS\\SheepSC.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-28T11:37:18.013Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "RabbitSC.cs",
+              "DocumentMoniker": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\Gameplay\\AnimalS\\RabbitSC.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Gameplay\\AnimalS\\RabbitSC.cs",
+              "ToolTip": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\Gameplay\\AnimalS\\RabbitSC.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Gameplay\\AnimalS\\RabbitSC.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-28T11:37:06.52Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "PigSC.cs",
+              "DocumentMoniker": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\Gameplay\\AnimalS\\PigSC.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Gameplay\\AnimalS\\PigSC.cs",
+              "ToolTip": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\Gameplay\\AnimalS\\PigSC.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Gameplay\\AnimalS\\PigSC.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-28T11:36:58.574Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "RamSC.cs",
+              "DocumentMoniker": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\Gameplay\\AnimalS\\RamSC.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Gameplay\\AnimalS\\RamSC.cs",
+              "ToolTip": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\Gameplay\\AnimalS\\RamSC.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Gameplay\\AnimalS\\RamSC.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-28T11:36:46.423Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "OstrictSC.cs",
+              "DocumentMoniker": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\Gameplay\\AnimalS\\OstrictSC.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Gameplay\\AnimalS\\OstrictSC.cs",
+              "ToolTip": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\Gameplay\\AnimalS\\OstrictSC.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Gameplay\\AnimalS\\OstrictSC.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-28T11:36:36.684Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "SnakeSC.cs",
+              "DocumentMoniker": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\Gameplay\\AnimalS\\SnakeSC.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Gameplay\\AnimalS\\SnakeSC.cs",
+              "ToolTip": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\Gameplay\\AnimalS\\SnakeSC.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Gameplay\\AnimalS\\SnakeSC.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-28T11:36:23.661Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "SnailSC.cs",
+              "DocumentMoniker": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\Gameplay\\AnimalS\\SnailSC.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Gameplay\\AnimalS\\SnailSC.cs",
+              "ToolTip": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\Gameplay\\AnimalS\\SnailSC.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Gameplay\\AnimalS\\SnailSC.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-28T11:36:11.018Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "PeacockSC.cs",
+              "DocumentMoniker": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\Gameplay\\AnimalS\\PeacockSC.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Gameplay\\AnimalS\\PeacockSC.cs",
+              "ToolTip": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\Gameplay\\AnimalS\\PeacockSC.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Gameplay\\AnimalS\\PeacockSC.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-28T11:35:58.423Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "LandTurtleSC.cs",
+              "DocumentMoniker": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\Gameplay\\AnimalS\\LandTurtleSC.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Gameplay\\AnimalS\\LandTurtleSC.cs",
+              "ToolTip": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\Gameplay\\AnimalS\\LandTurtleSC.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Gameplay\\AnimalS\\LandTurtleSC.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-28T11:35:36.562Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "LionSC.cs",
+              "DocumentMoniker": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\Gameplay\\AnimalS\\LionSC.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Gameplay\\AnimalS\\LionSC.cs",
+              "ToolTip": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\Gameplay\\AnimalS\\LionSC.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Gameplay\\AnimalS\\LionSC.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-28T11:35:27.512Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "HorseSC.cs",
+              "DocumentMoniker": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\Gameplay\\AnimalS\\HorseSC.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Gameplay\\AnimalS\\HorseSC.cs",
+              "ToolTip": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\Gameplay\\AnimalS\\HorseSC.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Gameplay\\AnimalS\\HorseSC.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-28T11:35:17.445Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "HenSC.cs",
+              "DocumentMoniker": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\Gameplay\\AnimalS\\HenSC.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Gameplay\\AnimalS\\HenSC.cs",
+              "ToolTip": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\Gameplay\\AnimalS\\HenSC.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Gameplay\\AnimalS\\HenSC.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-28T11:35:06.224Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "KoalaSC.cs",
+              "DocumentMoniker": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\Gameplay\\AnimalS\\KoalaSC.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Gameplay\\AnimalS\\KoalaSC.cs",
+              "ToolTip": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\Gameplay\\AnimalS\\KoalaSC.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Gameplay\\AnimalS\\KoalaSC.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-28T11:34:56.995Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "HedgehogSC.cs",
+              "DocumentMoniker": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\Gameplay\\AnimalS\\HedgehogSC.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Gameplay\\AnimalS\\HedgehogSC.cs",
+              "ToolTip": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\Gameplay\\AnimalS\\HedgehogSC.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Gameplay\\AnimalS\\HedgehogSC.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-28T11:34:48.228Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "GooseSC.cs",
+              "DocumentMoniker": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\Gameplay\\AnimalS\\GooseSC.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Gameplay\\AnimalS\\GooseSC.cs",
+              "ToolTip": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\Gameplay\\AnimalS\\GooseSC.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Gameplay\\AnimalS\\GooseSC.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-28T11:34:38.368Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "GiraffSC.cs",
+              "DocumentMoniker": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\Gameplay\\AnimalS\\GiraffSC.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Gameplay\\AnimalS\\GiraffSC.cs",
+              "ToolTip": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\Gameplay\\AnimalS\\GiraffSC.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Gameplay\\AnimalS\\GiraffSC.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-28T11:34:28.464Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "FoxSC.cs",
+              "DocumentMoniker": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\Gameplay\\AnimalS\\FoxSC.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Gameplay\\AnimalS\\FoxSC.cs",
+              "ToolTip": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\Gameplay\\AnimalS\\FoxSC.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Gameplay\\AnimalS\\FoxSC.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-28T11:34:20.815Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
               "Title": "AnimalSC.cs",
               "DocumentMoniker": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\Gameplay\\AnimalS\\AnimalSC.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Gameplay\\AnimalS\\AnimalSC.cs",
               "ToolTip": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\Gameplay\\AnimalS\\AnimalSC.cs",
               "RelativeToolTip": "Assets\\Scripts\\Gameplay\\AnimalS\\AnimalSC.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAzAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-20T18:54:08.02Z"
+              "WhenOpened": "2026-05-28T10:19:52.551Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "ShopSC.cs",
+              "DocumentMoniker": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\Interface\\ShopSC.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Interface\\ShopSC.cs",
+              "ToolTip": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\Interface\\ShopSC.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Interface\\ShopSC.cs",
+              "ViewState": "AgIAAEwAAAAAAAAAAAAcwH4AAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-28T09:49:48.632Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "StoneMineSC.cs",
+              "DocumentMoniker": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\StoneMineSC.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\StoneMineSC.cs",
+              "ToolTip": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\StoneMineSC.cs",
+              "RelativeToolTip": "Assets\\Scripts\\StoneMineSC.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-28T09:01:33.052Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "IronMinesSC.cs",
+              "DocumentMoniker": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\IronMinesSC.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\IronMinesSC.cs",
+              "ToolTip": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\IronMinesSC.cs",
+              "RelativeToolTip": "Assets\\Scripts\\IronMinesSC.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-28T09:01:32.655Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Joystick.cs",
+              "DocumentMoniker": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\Interface\\Joystick.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Interface\\Joystick.cs",
+              "ToolTip": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\Interface\\Joystick.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Interface\\Joystick.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAowCcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T10:32:06.958Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "StepholderSC.cs",
-              "DocumentMoniker": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\Gameplay\\StepholderSC.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Gameplay\\StepholderSC.cs",
-              "ToolTip": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\Gameplay\\StepholderSC.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Gameplay\\StepholderSC.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAhAAAAAAAAAA==",
+              "Title": "GeneralContrlSC.cs",
+              "DocumentMoniker": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\Gameplay\\GeneralContrlSC.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Gameplay\\GeneralContrlSC.cs",
+              "ToolTip": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\Gameplay\\GeneralContrlSC.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Gameplay\\GeneralContrlSC.cs",
+              "ViewState": "AgIAADwAAAAAAAAAAAAowBwAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-20T18:52:10.02Z"
+              "WhenOpened": "2026-05-25T10:26:53.047Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "LoseSC.cs",
-              "DocumentMoniker": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\Interface\\LoseSC.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Interface\\LoseSC.cs",
-              "ToolTip": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\Interface\\LoseSC.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Interface\\LoseSC.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-20T18:49:44.928Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "PauseSC.cs",
-              "DocumentMoniker": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\Backend\\PauseSC.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Backend\\PauseSC.cs",
-              "ToolTip": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\Backend\\PauseSC.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Backend\\PauseSC.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-20T18:49:26.565Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ArkSC.cs",
-              "DocumentMoniker": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\Gameplay\\ArkSC.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Gameplay\\ArkSC.cs",
-              "ToolTip": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\Gameplay\\ArkSC.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Gameplay\\ArkSC.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-20T18:49:16.011Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "ArkMakingMNSC.cs",
               "DocumentMoniker": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\Gameplay\\ArkMakingMNSC.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Gameplay\\ArkMakingMNSC.cs",
               "ToolTip": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\Gameplay\\ArkMakingMNSC.cs",
               "RelativeToolTip": "Assets\\Scripts\\Gameplay\\ArkMakingMNSC.cs",
-              "ViewState": "AgIAAFgAAAAAAAAAAAAcwGwAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAACAAAAAAAAAAAAAowEkAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-20T18:48:28.468Z"
+              "WhenOpened": "2026-05-24T16:52:57.807Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "TreeSC.cs",
-              "DocumentMoniker": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\TreeSC.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\TreeSC.cs",
-              "ToolTip": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\TreeSC.cs",
-              "RelativeToolTip": "Assets\\Scripts\\TreeSC.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAgwBcAAAAuAAAAAAAAAA==",
+              "DocumentIndex": 27,
+              "Title": "NoahSC.cs",
+              "DocumentMoniker": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\Gameplay\\NoahSC.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Gameplay\\NoahSC.cs",
+              "ToolTip": "D:\\Projects\\2D Project - SDCasual\\2D_UtopiaRise\\Assets\\Scripts\\Gameplay\\NoahSC.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Gameplay\\NoahSC.cs",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAUwAMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-20T17:28:30.889Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-23T10:02:40.593Z"
             }
           ]
         }

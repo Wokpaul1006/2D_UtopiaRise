@@ -4,13 +4,16 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Tidal
-  - Platform
   - Axe
-  - Ground
   - Tree
-  - Wood
   - Noah
+  - Build_Pos
+  - Logs
+  - Wheat
+  - Fruits
+  - Coin
+  - Iron
+  - Stone
   layers:
   - Default
   - TransparentFX

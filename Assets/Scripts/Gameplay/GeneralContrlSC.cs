@@ -7,7 +7,6 @@ public class GeneralContrlSC : Singleton<GeneralContrlSC>
 {
     [HideInInspector] PauseSC pausPnl;
     [HideInInspector] SettingSC settingPnl;
-    [HideInInspector] LoseSC losePnl;
     [HideInInspector] PlayerInforSC playerPnl;
     [HideInInspector] DailyRewardSC dailyrewardPnl;
     [HideInInspector] ShopSC shopCtr;
@@ -22,29 +21,25 @@ public class GeneralContrlSC : Singleton<GeneralContrlSC>
     [HideInInspector] AchievementSC achievePnl;
     [HideInInspector] DataSC data;
     [HideInInspector] PromotionSC promoPNl;
-    [SerializeField] AdsMN adsMN;
+    [HideInInspector] AdsMN adsMN;
     [SerializeField] HomeSC home;
 
     public string toDay;
     public int gameMode, deviceType, genThemeAllow, genSFXAllow;
-    int adsInterCount, adsRewardCount, targetIntersAdsCount, targetRewardAdsCount;
+    int adsInterCount, targetIntersAdsCount;
     void Start() 
     {
         adsInterCount = 0;
-        adsRewardCount = 0;
         targetIntersAdsCount = 3;
-        targetRewardAdsCount = 5;
         gameMode = 0;
         CheckDeviceType();
         InitEnviroment();
-        Invoke(nameof(AssistAdsMn), 10f);
         Invoke(nameof(ShowRatePnl), 600f);
     } 
     void InitEnviroment()
     {
         pausPnl = GameObject.Find("PNL_PausePnl").GetComponent<PauseSC>();
         settingPnl = GameObject.Find("PNL_SettingPnl").GetComponent<SettingSC>();
-        losePnl = GameObject.Find("PNL_LosePnl").GetComponent<LoseSC>();
         playerPnl = GameObject.Find("PNL_PlayerInfo").GetComponent<PlayerInforSC>();
         dailyrewardPnl = GameObject.Find("PNL_DailyReward").GetComponent<DailyRewardSC>();
         shopCtr = GameObject.Find("PNL_Shop").GetComponent<ShopSC>();
@@ -67,7 +62,6 @@ public class GeneralContrlSC : Singleton<GeneralContrlSC>
     #region Handle Panels Visibles
     public void ShowSetting(bool isShow) => settingPnl.gameObject.SetActive(isShow);
     public void ShowPause(bool isShow) => pausPnl.gameObject.SetActive(isShow);
-    public void ShowLose(bool isShow) => losePnl.gameObject.SetActive(isShow);
     public void ShowReward(bool isShow) => dailyrewardPnl.gameObject.SetActive(isShow);
     public void ShowShop(bool isShow) => shopCtr.gameObject.SetActive(isShow);
     public void ShowInfor(bool isShow) => playerPnl.gameObject.SetActive(isShow);
@@ -123,7 +117,6 @@ public class GeneralContrlSC : Singleton<GeneralContrlSC>
         readmePnl.gameObject.SetActive(false);
 
         ShowPause(false);
-        ShowLose(false);
         ShowShop(false);
         ShowInfor(false);
         ShowCredit(false);
@@ -152,29 +145,19 @@ public class GeneralContrlSC : Singleton<GeneralContrlSC>
         if(adsInterCount >= targetIntersAdsCount)
         {
             adsMN.ShowAds(1);
-            sceneCtr.OnLoadScene(2);
+            sceneCtr.OnLoadScene(1);
             adsInterCount = 0;
         }else if(adsInterCount < targetIntersAdsCount)
         {
-            sceneCtr.OnLoadScene(2);
+            sceneCtr.OnLoadScene(1);
         }
-    }
-    public void OnReplay()
-    {
-        //Load Reward
-        if(gameMode == 2) sceneCtr.OnLoadScene(2);
     }
     public void OnExistGame()
     {
+        data.OnAutoSaveInfors();
         Application.Quit(0);
     }
     #endregion
-
-    private void AssistAdsMn()
-    {
-        adsMN = GameObject.Find("CAN_GenControl").GetComponent<AdsMN>();
-        if (adsMN == null) { print("adsMN null"); }
-    }
     private void ShowRatePnl()
     {
         //ratePnl.gameObject.SetActive(true);

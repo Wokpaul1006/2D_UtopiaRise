@@ -11,15 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/01_Home.unity
     guid: 96d3459993ddc124996b0214045e0eb8
-  - enabled: 0
-    path: Assets/Scenes/02_UtopiaChase.unity
-    guid: b60ac14012346c246876cb672afcacca
   - enabled: 1
     path: Assets/03_ArkMaking.unity
     guid: 862d4627f4f8283459b0901e2bb9a46f
-  - enabled: 0
-    path: Assets/Scenes/04_AnimalSecure.unity
-    guid: 6a6d64d26c65eb64384a47d94c61ba42
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 0022eb5593b593d438fca6555694a977, type: 2}
     com.unity.localization.settings: {fileID: 11400000, guid: 794e54dbbe8deb945a8f1dcae923f41c, type: 2}

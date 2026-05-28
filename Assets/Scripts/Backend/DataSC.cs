@@ -1,3 +1,4 @@
+using Newtonsoft.Json.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,14 +11,16 @@ public class DataSC : MonoBehaviour
     public bool isFirstPlay;
 
     //Player's data variables
-    public string pName;
-    public int pCoin, pGems;
-    public int pWoods, pIron, pStone, pCrop, pFruits;
-    public int pSFX, pTheme;
+    [HideInInspector] public string pName;
+    [HideInInspector] public int pCoin, pGems;
+    [HideInInspector] public int pWoods, pIron, pStone, pCrop, pFruits;
+    [HideInInspector] public int pSFX, pTheme;
 
     //Dialy Patrol
-    public int pAllowClaimDaily, pDailyStreak;
-    public string pLastDailyClaim;
+    [HideInInspector] public int pAllowClaimDaily, pDailyStreak;
+    [HideInInspector] public string pLastDailyClaim;
+
+    [SerializeField] SaveSystem saveSys;
     private void Awake()
     {
         DontDestroyOnLoad(this);
@@ -82,6 +85,7 @@ public class DataSC : MonoBehaviour
     public void DataDelete()
     {
         PlayerPrefs.DeleteAll();
+        OnResetJSON();
         SetNewPlayer();
         //infor.GetPlayerData();
     }
@@ -101,6 +105,8 @@ public class DataSC : MonoBehaviour
     {
         PlayerPrefs.SetInt("Totalscore", currency);
         pCoin = PlayerPrefs.GetInt("TotalCoin");
+        int[] a = { pWoods, pIron, pStone, pFruits, pCrop, pCoin };
+        saveSys.OnSaveResourceData(a);
     }
     public void UpdateTotalGem(int gems)
     {
@@ -132,7 +138,40 @@ public class DataSC : MonoBehaviour
     public void UpdateStreak(int value)
     {
         PlayerPrefs.SetInt("PatrolDailyStreak", value);
-        pDailyStreak = value;
+        pDailyStreak = PlayerPrefs.GetInt("PatrolDailyStreak");
+    }
+    #endregion
+
+    #region Update Ingame Stats
+    public void UpdateWoods(int value)
+    {
+        pWoods = value;
+        int[] a = { pWoods, pIron, pStone, pFruits, pCrop, pCoin };
+        saveSys.OnSaveResourceData(a);
+    }
+    public void UpdateIron(int value)
+    {
+        pIron = value;
+        int[] a = { pWoods, pIron, pStone, pFruits, pCrop, pCoin };
+        saveSys.OnSaveResourceData(a);
+    }
+    public void UpdateStone(int value)
+    {
+        pStone = value;
+        int[] a = { pWoods, pIron, pStone, pFruits, pCrop, pCoin };
+        saveSys.OnSaveResourceData(a);
+    }
+    public void UpdateFruist(int value)
+    {
+        pFruits = value;
+        int[] a = { pWoods, pIron, pStone, pFruits, pCrop, pCoin };
+        saveSys.OnSaveResourceData(a);
+    }
+    public void UpdateCrop(int value)
+    {
+        pCrop = value;
+        int[] a = { pWoods, pIron, pStone, pFruits, pCrop, pCoin};
+        saveSys.OnSaveResourceData(a);
     }
     #endregion
 
@@ -150,20 +189,25 @@ public class DataSC : MonoBehaviour
     {
         return true;
     }
-    public void CheckThemeState()
-    {
-    }
-    public void CheckSoundState()
-    {
-
-    }
     #endregion
 
     #region JSON HANDLERS
     public void OnLoadInventory()
     {
-        SaveSystem saveSys = new SaveSystem();
+        InventoryData inventLoad = saveSys.Load();
 
+        pWoods = inventLoad.resourceDatas[0];
+        pIron = inventLoad.resourceDatas[1];
+        pStone = inventLoad.resourceDatas[2];
+        pFruits = inventLoad.resourceDatas[3];
+        pCrop = inventLoad.resourceDatas[4];
+        pCoin = inventLoad.resourceDatas[5];
     }
+    public void OnAutoSaveInfors()
+    {
+        int[] a = { pWoods, pIron, pStone, pFruits, pCrop, pCoin };
+        saveSys.OnSaveResourceData(a);
+    }
+    private void OnResetJSON() { saveSys.OnReset(); }
     #endregion
 }

@@ -21,7 +21,6 @@ public class PauseSC : Singleton<PauseSC>
     public void Resume()
     {
         //Resume All Corotine
-        
     }
     public void ToHome()
     {

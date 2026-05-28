@@ -6,7 +6,8 @@ public class ChickSC : AnimalSC
 {
     void Start()
     {
-        animalName = this.name;
         base.Start();
+        isPredators = true;
+        nutritionAmount = 0;
     }
 }

@@ -11,62 +11,62 @@ public class NoahSC : MonoBehaviour
     //Gameplay Attributes
     private int deviceType;
     private bool isPause;
+    public bool isAllowoMove;
 
     //Player attribute
     private int noahDir;
     private float moveSpd;
-    private float choppingDelay;
-    private float axeMoveSpd;
-    Vector3 curTegetPos, originPos;
+    Vector3 curTargetPos, weapOriginPos;
     void Start()
     {
-        moveSpd = 5f;
-        axeMoveSpd = 5f;
-        choppingDelay = 2f;
+        moveSpd = 3f;
         noahDir = 0;
         genCtr = GameObject.Find("CAN_GenControl").GetComponent<GeneralContrlSC>();
         joystickCtr = GameObject.Find("IMG_JoystickHandle").GetComponent<Joystick>();
         cutwoodMn = GameObject.Find("CAN_ArkMaking").GetComponent<ArkMakingMNSC>();
         deviceType = genCtr.deviceType;
-        curTegetPos = originPos = Vector3.zero;
+        curTargetPos = Vector3.zero;
         curTarget = null;
+        isAllowoMove = true;
     }
     void Update()
     {
-        if(deviceType == 1)
+        if(isAllowoMove == true)
         {
-            OnMoveActionKey();
-        }else if(deviceType == 2)
-        {
-            OnMoveByTouch();
+            if (deviceType == 1)
+            {
+                OnMoveActionKey();
+            }
+            else if (deviceType == 2)
+            {
+                OnMoveByTouch();
+            }
         }
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Tree")
         {
-            print("in hit tree");
             curTarget = collision.gameObject;
-            curTegetPos = curTarget.transform.position;
-            print("curTreePos = " + curTegetPos);
+            curTargetPos = curTarget.transform.position;
         }
-    }
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        curTarget = null;
-        curTegetPos = Vector3.zero;
+        else if (collision.gameObject.tag == "Logs") { cutwoodMn.OnIncreaseWoods(); }
+        else if(collision.gameObject.tag == "Iron") { cutwoodMn.OnIncreaseIron(); }
+        else if (collision.gameObject.tag == "Stone") { cutwoodMn.OnIncreaseStone(); }
+        else if (collision.gameObject.tag == "Fruits") { cutwoodMn.OnInCreaseFruits(); }
+        else if (collision.gameObject.tag == "Wheat") { cutwoodMn.OnIncreaseCrop(); }
+        else if (collision.gameObject.tag == "Coin") { cutwoodMn.OnInCreaseMoney(); }
+        else if (collision.gameObject.tag == "Build_Pos") 
+        {
+            isAllowoMove = false;
+            cutwoodMn.OnShowBuildOption(); 
+        }
     }
 
     private void OnMoveActionKey()
     {
-        if(Input.GetKey(KeyCode.W) == true)
-        {
-            transform.position += Vector3.up * Time.deltaTime * moveSpd;
-        }
-        else if(Input.GetKey(KeyCode.S) == true)
-        {
-            transform.position += Vector3.down * Time.deltaTime * moveSpd;
-        }
+        if(Input.GetKey(KeyCode.W) == true) { transform.position += Vector3.up * Time.deltaTime * moveSpd; }
+        else if(Input.GetKey(KeyCode.S) == true) {    transform.position += Vector3.down * Time.deltaTime * moveSpd; }
         else if(Input.GetKey(KeyCode.A) == true)
         {
             if(noahDir == 0) { ChangeDir(); }
@@ -92,19 +92,18 @@ public class NoahSC : MonoBehaviour
         {
             noahDir = 1;
             float prefabCurentScale = gameObject.transform.localScale.y;
-            gameObject.transform.localScale = new Vector3(-prefabCurentScale, prefabCurentScale, prefabCurentScale);
+            gameObject.transform.localScale = new Vector3(prefabCurentScale, prefabCurentScale, prefabCurentScale);
         }
         else if (noahDir == 1)
         {
             noahDir = 0;
             float prefabCurentScale = gameObject.transform.localScale.y;
-            gameObject.transform.localScale = new Vector3(prefabCurentScale, prefabCurentScale, prefabCurentScale);
+            gameObject.transform.localScale = new Vector3(-prefabCurentScale, prefabCurentScale, prefabCurentScale);
         }
     }
     public void OnAttack()
     {
-        originPos = weapon.transform.position;
-        weapon.transform.DOMove(curTegetPos, 2f).SetLoops(2,LoopType.Yoyo);
+        isAllowoMove = false;
+        weapon.transform.DOMove(curTargetPos, 1f).SetLoops(2, LoopType.Yoyo).OnComplete(() => isAllowoMove = true);
     }
-
 }

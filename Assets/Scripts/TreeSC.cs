@@ -5,26 +5,24 @@ using UnityEngine.Analytics;
 
 public class TreeSC : MonoBehaviour
 {
+    //Do check bonus
     [SerializeField] NoahSC noah;
-    [SerializeField] GameObject wood;
+    [SerializeField] GameObject wood, fruits;
     [HideInInspector] ArkMakingMNSC genCtr;
-    int hitCount, hitDelay, hitTargets, randWoodDrop;
-    Vector3 noahPos;
+    int hitCount, randWoodDrop;
+    int chanceDropFruits;
     void Start()
     {
         genCtr = GameObject.Find("CAN_ArkMaking").GetComponent<ArkMakingMNSC>();
         hitCount = 0;
         randWoodDrop = Random.Range(1, 4);
+        chanceDropFruits = Random.Range(1, 100);
         noah = GameObject.Find("OBJ_Noah(Clone)").GetComponent<NoahSC>();
-        noahPos = noah.transform.position;
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-
         if (collision.gameObject.tag == "Axe")
         {
-            print("in hit axe");
-            hitCount++;
             OnHandleChoping();
         }
     }
@@ -35,12 +33,17 @@ public class TreeSC : MonoBehaviour
             Instantiate(wood, new Vector3(gameObject.transform.position.x - 0.25f, gameObject.transform.position.y, 0), Quaternion.identity);
         }
     }
+    private void OnSpawnFruist()
+    {
+        Instantiate(fruits, new Vector3(gameObject.transform.position.x - 0.25f, gameObject.transform.position.y, 0), Quaternion.identity);
+    }
     private void OnHandleChoping()
     {
-        print("in handle chopping, hitcoun  = " + hitCount);
+        hitCount++;
         if (hitCount >= 3)
         {
             OnSpawnWood();
+            if (chanceDropFruits > 20) OnSpawnFruist();
             genCtr.curTreeOnScreen--;
             Destroy(gameObject);
         }
