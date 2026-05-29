@@ -45,7 +45,7 @@ public class NoahSC : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Tree")
+        if (collision.gameObject.tag == "Tree" || collision.gameObject.tag == "Animals")
         {
             curTarget = collision.gameObject;
             curTargetPos = curTarget.transform.position;

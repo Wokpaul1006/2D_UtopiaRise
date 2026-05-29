@@ -16,7 +16,7 @@ public class ShopSC : MonoBehaviour
     void Start()
     {
         genCtr = GameObject.Find("CAN_GenControl").GetComponent<GeneralContrlSC>();
-        adsCtr = GameObject.Find("CAN_GenControl").GetComponent<AdsMN>();
+        adsCtr = GameObject.Find("AdsMN").GetComponent<AdsMN>();
         dataCtr = GameObject.Find("CAN_GenControl").GetComponent<DataSC>();
         SwitchPanel(true, false);
         LoadDatas();

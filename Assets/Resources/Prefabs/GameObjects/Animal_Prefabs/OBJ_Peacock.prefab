@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7687611820146015158}
   m_Layer: 0
   m_Name: OBJ_Peacock
-  m_TagString: Untagged
+  m_TagString: Animals
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -171,3 +171,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2eb42f89175d534d9233f7601ee8393, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dropItem: {fileID: 0}
+  coin: {fileID: 0}

@@ -40,6 +40,7 @@ public class AnimalSC : MonoBehaviour
         }else
         {
             //Run away
+            transform.DOMove(new Vector3(transform.position.x - 0.5f, transform.position.y, 0), 0.5f);
         }
     }
     internal void OnTriggerEnter2D(Collider2D collision)
@@ -66,6 +67,10 @@ public class AnimalSC : MonoBehaviour
             }
             genCtr.curTreeOnScreen--;
             Destroy(gameObject);
+        }else
+        {
+            //Attack back
+            DoBehaviour();
         }
     }
     internal void PreyInCollide()
@@ -73,13 +78,17 @@ public class AnimalSC : MonoBehaviour
         hitCount++;
         if (hitCount >= 3)
         {
-            //Instantiate(dropItem, new Vector3(gameObject.transform.position.x - 0.25f, gameObject.transform.position.y, 0), Quaternion.identity);
+            //Case of decease
+            Instantiate(dropItem, new Vector3(gameObject.transform.position.x - 0.25f, gameObject.transform.position.y, 0), Quaternion.identity);
             if (chanceDropMoney > 70)
             {
-                //Instantiate(coin, new Vector3(gameObject.transform.position.x - 0.25f, gameObject.transform.position.y, 0), Quaternion.identity);
+                Instantiate(coin, new Vector3(gameObject.transform.position.x - 0.25f, gameObject.transform.position.y, 0), Quaternion.identity);
             }
             genCtr.curTreeOnScreen--;
             Destroy(gameObject);
+        }else
+        {
+            DoBehaviour();
         }
     }
     internal void CaculateChanceToDropCoin()

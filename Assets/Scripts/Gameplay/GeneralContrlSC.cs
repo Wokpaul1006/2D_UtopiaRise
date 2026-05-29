@@ -64,7 +64,11 @@ public class GeneralContrlSC : Singleton<GeneralContrlSC>
     public void ShowPause(bool isShow) => pausPnl.gameObject.SetActive(isShow);
     public void ShowReward(bool isShow) => dailyrewardPnl.gameObject.SetActive(isShow);
     public void ShowShop(bool isShow) => shopCtr.gameObject.SetActive(isShow);
-    public void ShowInfor(bool isShow) => playerPnl.gameObject.SetActive(isShow);
+    public void ShowInfor(bool isShow)
+    {
+         playerPnl.gameObject.SetActive(isShow);
+         ShowLeader(!isShow);
+    }
     public void ShowCredit(bool isShow) => creditPnl.gameObject.SetActive(isShow);
     public void ShowRating(bool isShow) => reatingPnl.gameObject.SetActive(isShow);
     public void ShowAchievement(bool isShow) => achievePnl.gameObject.SetActive(isShow);

@@ -109,6 +109,7 @@
     <Compile Include="Assets\Scripts\StoneSC.cs" />
     <Compile Include="Assets\Scripts\Gameplay\GeneralContrlSC.cs" />
     <Compile Include="Assets\Scripts\Interface\PlayerInforSC.cs" />
+    <Compile Include="Assets\FoodSC.cs" />
     <Compile Include="Assets\Scripts\Gameplay\AnimalS\SnakeSC.cs" />
     <Compile Include="Assets\Scripts\Gameplay\AnimalS\ZebraSC.cs" />
     <Compile Include="Assets\Scripts\Interface\HomeSC.cs" />
@@ -127,6 +128,7 @@
     <Compile Include="Assets\Scripts\Gameplay\NoahSC.cs" />
     <Compile Include="Assets\Scripts\Gameplay\AnimalS\CowSC.cs" />
     <Compile Include="Assets\Scripts\Backend\CameraFollowPlayerSC.cs" />
+    <Compile Include="Assets\CoinSC.cs" />
     <Compile Include="Assets\Scripts\Backend\InventoryData.cs" />
     <Compile Include="Assets\Scripts\Interface\ShopSC.cs" />
     <Compile Include="Assets\Scripts\Gameplay\AnimalS\GooseSC.cs" />

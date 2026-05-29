@@ -67,6 +67,170 @@ MonoBehaviour:
     m_Localized: LOSE
     m_Metadata:
       m_Items: []
+  - m_Id: 2538057583259648
+    m_Localized: A product of
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2538615832539136
+    m_Localized: YOU ARE RUN OUT OF MONEY
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2539394022731776
+    m_Localized: SHOP
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2539686663516160
+    m_Localized: PLAYER INFO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2539878183825408
+    m_Localized: PRIVACY POLICY
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2539998770065408
+    m_Localized: DAILY REWARD
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2540182031790080
+    m_Localized: ABOUT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2540930543087616
+    m_Localized: DOCUMENTS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2541119626506240
+    m_Localized: TERM & USE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2541268125839360
+    m_Localized: PLAYER INFOR
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2541416998465536
+    m_Localized: LEADERBOARD
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2541690181873664
+    m_Localized: "TRY OTHER \nSDCASUAL GAMES!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2541903109910528
+    m_Localized: SOCIAL
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2542031002628096
+    m_Localized: ACHIEVEMENTS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2542148392808448
+    m_Localized: CLAIM
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2542290529382400
+    m_Localized: WATCH ADS FOR FREE!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2542493764382720
+    m_Localized: CLOSE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2542592208891904
+    m_Localized: QUIT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2542693765574656
+    m_Localized: CLOSE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2542935680446464
+    m_Localized: CLOSE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2543002780921856
+    m_Localized: CLOSE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2543102571802624
+    m_Localized: CLAIM
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2543550879985664
+    m_Localized: CLOSE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2543481623638016
+    m_Localized: CLAIM
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2543806245990400
+    m_Localized: CLAIM
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2543973632274432
+    m_Localized: CLOSE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2544111612293120
+    m_Localized: CLOSE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2544220097966080
+    m_Localized: CLOSE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2544355632705536
+    m_Localized: CARRIER RECORD
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2544565171744768
+    m_Localized: CLOSE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2544682150883328
+    m_Localized: CLOSE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2544777571299328
+    m_Localized: CLOSE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2544972891648000
+    m_Localized: CLAIM
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2545103842013184
+    m_Localized: CLAIM
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2545196225753088
+    m_Localized: CLAIM
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2545341663244288
+    m_Localized: BONUS INCOME WOODS FOR 15 MINUTES
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2545567698481152
+    m_Localized: BONUS INCOME IRON FOR 15 MINUTES
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2545760762294272
+    m_Localized: BONUS INCOME STONE FOR 15 MINUTES
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2545908401795072
+    m_Localized: BONUS INCOME CROPS FOR 15 MINUTES
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2546114224680960
+    m_Localized: BONUS INCOME FRUITS FOR 15 MINUTES
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2546260287123456
+    m_Localized: BONUS INCOME ALLS FOR 5 MINUTES
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

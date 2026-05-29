@@ -11,10 +11,11 @@ GameObject:
   - component: {fileID: 1392372179410285020}
   - component: {fileID: 6926550133041038499}
   - component: {fileID: 4653367567586648314}
-  - component: {fileID: 4102260070910847836}
+  - component: {fileID: 1883356487676501872}
+  - component: {fileID: 7945879846178948276}
   m_Layer: 0
   m_Name: OBJ_Coin
-  m_TagString: Fruits
+  m_TagString: Coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -113,8 +114,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &4102260070910847836
-BoxCollider2D:
+--- !u!58 &1883356487676501872
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -142,19 +143,21 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5.12, y: 5.12}
-    newSize: {x: 2.56, y: 1.76}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.82, y: 2.56}
-  m_EdgeRadius: 0
+  m_Radius: 2.56
+--- !u!114 &7945879846178948276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3458337980191087320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b053fe2c3b226d4fbc05115033a7bb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

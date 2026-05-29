@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7379639250471348988}
   m_Layer: 0
   m_Name: OBJ_Giraff
-  m_TagString: Untagged
+  m_TagString: Animals
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

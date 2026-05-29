@@ -8,9 +8,6 @@ public class DailyRewardSC : MonoBehaviour
 {
     [HideInInspector] DataSC data;
     [HideInInspector] GeneralContrlSC genCtr;
-    [SerializeField] List<GameObject> rewardDailyLocker = new List<GameObject>();
-    [HideInInspector] HomeSC menu;
-    [SerializeField] List<GameObject> dailyGrid = new List<GameObject>();
     [SerializeField] List<Button> butnList = new List<Button>();
 
     private const string LastPatrolTimeKey = "LastPatrolTime";

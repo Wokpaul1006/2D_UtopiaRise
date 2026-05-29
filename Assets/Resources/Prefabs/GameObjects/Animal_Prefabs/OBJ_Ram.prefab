@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7735211815708424571}
   m_Layer: 0
   m_Name: OBJ_Ram
-  m_TagString: Untagged
+  m_TagString: Animals
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
