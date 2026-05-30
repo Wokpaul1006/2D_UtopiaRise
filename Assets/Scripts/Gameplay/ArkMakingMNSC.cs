@@ -22,9 +22,9 @@ public class ArkMakingMNSC : MonoBehaviour
     [HideInInspector]
     public bool isGameStart; //Use for detech game start and pauise even
     private int woodAmount, ironAmount, stoneAmount, fruistAmount, cropAmount, moneyAmount;
-    private int treeOnScreenCapacity, preyOnScreenCap, pretadorOnScreenCap;
+    public int treeOnScreenCapacity, preyOnScreenCap, pretadorOnScreenCap;
     [HideInInspector] public int curTreeOnScreen;
-    private int randTreeToSpawn, curPreyOnScreen, curPredatorOnScreen;
+    public int randTreeToSpawn, curPreyOnScreen, curPredatorOnScreen;
 
     //Collect Item Mode
     void Start()
@@ -38,7 +38,7 @@ public class ArkMakingMNSC : MonoBehaviour
         treeOnScreenCapacity = 100;
         preyOnScreenCap = 30;
         pretadorOnScreenCap = 10;
-        genCtrl.AssitsGamemode(3);
+        genCtrl.AssitsGamemode(1);
         GetPlayerDatas();
         OnInitMap();
         SpawnIronMine();

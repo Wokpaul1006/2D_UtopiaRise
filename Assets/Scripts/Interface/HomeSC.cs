@@ -16,6 +16,7 @@ public class HomeSC : MonoBehaviour
         genCtrl = GameObject.Find("CAN_GenControl").GetComponent<GeneralContrlSC>();
         data = GameObject.Find("CAN_GenControl").GetComponent<DataSC>();
         HandleHomeUIs();
+        genCtrl.AssitsGamemode(0);
     }
 
     // Update is called once per frame

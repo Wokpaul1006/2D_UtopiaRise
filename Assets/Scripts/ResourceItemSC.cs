@@ -16,6 +16,7 @@ public class ResourceItemSC : MonoBehaviour
     {
         if (collision.gameObject.tag == "Noah")
         {
+            print("destroyed");
             Destroy(gameObject);
         }
     }

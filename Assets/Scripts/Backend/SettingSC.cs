@@ -12,7 +12,6 @@ public class SettingSC : MonoBehaviour
     [SerializeField] Image themeLoud, themeMute, sfxLoud, sfxMute;
     private void Awake()
     {
-        print("in Awake");
         sfxMNs = GameObject.Find("OBJ_SoundControl").GetComponent<SoundSC>();
         mainThemeMN = GameObject.Find("OBJ_SoundControl").GetComponent<MainThemeSC>();
         themeAllow = PlayerPrefs.GetInt("soundState");

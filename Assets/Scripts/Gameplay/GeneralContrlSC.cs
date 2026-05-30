@@ -14,7 +14,7 @@ public class GeneralContrlSC : Singleton<GeneralContrlSC>
     [HideInInspector] MainThemeSC mainthemMuzik;
     [HideInInspector] ArkMakingMNSC cutwoodCtr;
     [HideInInspector] CreditSC creditPnl;
-    [HideInInspector] RatingSC reatingPnl;
+    [HideInInspector] RatingSC ratingPnl;
     [HideInInspector] SceneMN sceneCtr;
     [HideInInspector] GameObject readmePnl;
     [HideInInspector] LeaderSC leaderPnl;
@@ -27,6 +27,8 @@ public class GeneralContrlSC : Singleton<GeneralContrlSC>
     public string toDay;
     public int gameMode, deviceType, genThemeAllow, genSFXAllow;
     int adsInterCount, targetIntersAdsCount;
+    [HideInInspector] public int isBoostWood, isBoostIron, isBoostStone, isBoostFruits, isBoostCrop;
+    [HideInInspector] private int countdonwBoostWood, countdownBoostIron, countdownBoostStone, countdownBoostFruits, countdownBoostCrop, isBoostAll;
     void Start() 
     {
         adsInterCount = 0;
@@ -34,7 +36,11 @@ public class GeneralContrlSC : Singleton<GeneralContrlSC>
         gameMode = 0;
         CheckDeviceType();
         InitEnviroment();
+        OnLoadBoosting();
         Invoke(nameof(ShowRatePnl), 600f);
+
+
+        countdonwBoostWood = countdownBoostIron = countdownBoostStone = countdownBoostCrop = countdownBoostCrop = 0;
     } 
     void InitEnviroment()
     {
@@ -44,7 +50,7 @@ public class GeneralContrlSC : Singleton<GeneralContrlSC>
         dailyrewardPnl = GameObject.Find("PNL_DailyReward").GetComponent<DailyRewardSC>();
         shopCtr = GameObject.Find("PNL_Shop").GetComponent<ShopSC>();
         creditPnl = GameObject.Find("PNL_Credit").GetComponent<CreditSC>();
-        reatingPnl = GameObject.Find("PNL_Rating").GetComponent<RatingSC>();
+        ratingPnl = GameObject.Find("PNL_Rating").GetComponent<RatingSC>();
         readmePnl = GameObject.Find("PNL_ReadMe");
         leaderPnl = GameObject.Find("PNL_Leaderboard").GetComponent<LeaderSC>();
         achievePnl = GameObject.Find("PNL_Achievement").GetComponent<AchievementSC>();
@@ -60,6 +66,22 @@ public class GeneralContrlSC : Singleton<GeneralContrlSC>
     }
 
     #region Handle Panels Visibles
+    private void HideAllPanel()
+    {
+        leaderPnl.gameObject.SetActive(false);
+        readmePnl.gameObject.SetActive(false);
+
+        ShowPause(false);
+        ShowShop(false);
+        ShowInfor(false);
+        ShowCredit(false);
+        ShowRating(false);
+        ShowReward(false);
+        ShowAchievement(false);
+        ShowLeader(false);
+        ShowSetting(false);
+        ShowPromo(false);
+    }
     public void ShowSetting(bool isShow) => settingPnl.gameObject.SetActive(isShow);
     public void ShowPause(bool isShow) => pausPnl.gameObject.SetActive(isShow);
     public void ShowReward(bool isShow) => dailyrewardPnl.gameObject.SetActive(isShow);
@@ -70,7 +92,7 @@ public class GeneralContrlSC : Singleton<GeneralContrlSC>
          ShowLeader(!isShow);
     }
     public void ShowCredit(bool isShow) => creditPnl.gameObject.SetActive(isShow);
-    public void ShowRating(bool isShow) => reatingPnl.gameObject.SetActive(isShow);
+    public void ShowRating(bool isShow) => ratingPnl.gameObject.SetActive(isShow);
     public void ShowAchievement(bool isShow) => achievePnl.gameObject.SetActive(isShow);
     public void ShowLeader(bool isShow) => leaderPnl.gameObject.SetActive(isShow);
     public void ShowPromo(bool isShow) => promoPNl.gameObject.SetActive(isShow);
@@ -111,26 +133,8 @@ public class GeneralContrlSC : Singleton<GeneralContrlSC>
                 break;
         }
     }
-    public void UpdateUI()
-    {
-        home.HandleHomeUIs();
-    }
-    private void HideAllPanel()
-    {
-        leaderPnl.gameObject.SetActive(false);
-        readmePnl.gameObject.SetActive(false);
-
-        ShowPause(false);
-        ShowShop(false);
-        ShowInfor(false);
-        ShowCredit(false);
-        ShowRating(false);
-        ShowReward(false);
-        ShowAchievement(false);
-        ShowLeader(false);
-        ShowSetting(false);
-        ShowPromo(false);
-    }
+    public void UpdateUI() => home.HandleHomeUIs();
+    
     public void GenLoadScene(sbyte orderScene) 
     {
         gameMode = orderScene;
@@ -138,8 +142,19 @@ public class GeneralContrlSC : Singleton<GeneralContrlSC>
     }
     public void AssitsGamemode(int a)
     {
-        cutwoodCtr = GameObject.Find("CAN_ArkMaking").GetComponent<ArkMakingMNSC>();
+        switch (a) 
+        {
+            case 0:
+                //Home menu
+                home = GameObject.Find("CAN_Home").GetComponent<HomeSC>();
+                break;
+                case 1:
+                //Main game Cutwood
+                cutwoodCtr = GameObject.Find("CAN_ArkMaking").GetComponent<ArkMakingMNSC>();
+                break;
+        }
     }
+
 
     #region Handle Loose Events
     public void OnToHome()
@@ -162,18 +177,11 @@ public class GeneralContrlSC : Singleton<GeneralContrlSC>
         Application.Quit(0);
     }
     #endregion
-    private void ShowRatePnl()
-    {
-        //ratePnl.gameObject.SetActive(true);
-    }
+    private void ShowRatePnl() => ratingPnl.gameObject.SetActive(true);
     public void OnResumeGame()
     {
         cutwoodCtr.isGameStart = true;
         ShowPause(false);
-    }
-    public void OnUpdatePlayerInformationAfterGames(int score)
-    {
-        data.UpdateTotalScore(score);
     }
     public void OnPlayTheme(int state)
     {
@@ -197,5 +205,112 @@ public class GeneralContrlSC : Singleton<GeneralContrlSC>
             sfxMuzik.PlaySFX();
         }
         data.UpdateSFXState(state);
+    }
+    public void OnLoadBoosting()
+    {
+        isBoostWood = data.pBoostWood;
+        if(isBoostWood == 1)
+        {
+            InvokeRepeating(nameof(OnCountDownBonusTimeBoostWoods), 0f, 1f);
+        }
+        isBoostIron = data.pBoostIron;
+        if(isBoostIron == 1)
+        {
+            InvokeRepeating(nameof(OnCoundownBoostingIron), 0f, 1f);
+        }
+        isBoostStone = data.pBoostStone;
+        if (isBoostIron == 1)
+        {
+            InvokeRepeating(nameof(OnCountDownBonusTimeBoostStone), 0f, 1f);
+        }
+        isBoostFruits = data.pBoostFruits;
+        if (isBoostIron == 1)
+        {
+            InvokeRepeating(nameof(OnCountDownBonusTimeBoostFruist), 0f, 1f);
+        }
+        isBoostCrop = data.pBoostCrop;
+        if (isBoostIron == 1)
+        {
+            InvokeRepeating(nameof(OnCountDownBonusTimeBoostCrop), 0f, 1f);
+        }
+        if (isBoostAll == 1)
+        {
+            InvokeRepeating(nameof(OnCountdownBonusAll), 0f, 1f);
+        }
+    }
+    public void OnUpdateBoostingFromShop(int index)
+    {
+        data.UpdatePlayerBoost(index, 1);
+    }
+
+    private void OnCountDownBonusTimeBoostWoods()
+    {
+        countdonwBoostWood++;
+        if(countdonwBoostWood >= 900)
+        {
+            CancelInvoke(nameof(OnCountDownBonusTimeBoostWoods));
+            data.UpdatePlayerBoost(0, 0);
+            OnLoadBoosting();
+            countdonwBoostWood = 0;
+        }
+    }
+    private void OnCoundownBoostingIron()
+    {
+        countdownBoostIron++;
+        if (countdownBoostIron >= 900)
+        {
+            CancelInvoke(nameof(OnCoundownBoostingIron));
+            data.UpdatePlayerBoost(1, 0);
+            OnLoadBoosting();
+            countdownBoostIron = 0;
+        }
+    }
+    private void OnCountDownBonusTimeBoostStone()
+    {
+        countdownBoostStone++;
+        if (countdownBoostStone >= 900)
+        {
+            CancelInvoke(nameof(OnCountDownBonusTimeBoostStone));
+            data.UpdatePlayerBoost(2, 0);
+            OnLoadBoosting();
+            countdownBoostStone = 0;
+        }
+    }
+    private void OnCountDownBonusTimeBoostFruist()
+    {
+        countdownBoostFruits++;
+        if (countdownBoostIron >= 900)
+        {
+            CancelInvoke(nameof(OnCountDownBonusTimeBoostFruist));
+            data.UpdatePlayerBoost(3, 0);
+            OnLoadBoosting();
+            countdownBoostFruits = 0;
+        }
+    }
+    private void OnCountDownBonusTimeBoostCrop()
+    {
+        countdownBoostIron++;
+        if (countdownBoostIron >= 900)
+        {
+            CancelInvoke(nameof(OnCountDownBonusTimeBoostCrop));
+            data.UpdatePlayerBoost(4, 0);
+            OnLoadBoosting();
+            countdownBoostCrop = 0;
+        }
+    }
+    private void OnCountdownBonusAll()
+    {
+        countdonwBoostWood++;
+        countdownBoostIron++;
+        countdownBoostStone++;
+        countdownBoostFruits++;
+        countdownBoostCrop++;
+        if(countdonwBoostWood >= 300)
+        {
+            CancelInvoke(nameof(OnCountdownBonusAll));
+            data.UpdatePlayerBoost(5, 0);
+            OnLoadBoosting();
+            countdonwBoostWood = countdownBoostIron = countdownBoostStone = countdownBoostCrop = countdownBoostCrop = 0;
+        }
     }
 }

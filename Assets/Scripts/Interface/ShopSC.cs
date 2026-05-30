@@ -13,6 +13,7 @@ public class ShopSC : MonoBehaviour
 
     [HideInInspector] int curPCoin, curPGems;
     [HideInInspector] int unitPrice;
+    [HideInInspector] int itemIndexBuy;
     void Start()
     {
         genCtr = GameObject.Find("CAN_GenControl").GetComponent<GeneralContrlSC>();
@@ -21,6 +22,8 @@ public class ShopSC : MonoBehaviour
         SwitchPanel(true, false);
         LoadDatas();
         HandleShopUIs();
+
+        itemIndexBuy = -1;
     }
     void SwitchPanel(bool isShowShop, bool isShowWarn)
     {
@@ -34,11 +37,13 @@ public class ShopSC : MonoBehaviour
     }
     void HandleShopUIs()
     {
+        LoadDatas();
         curPlayerGemsTxt.text = curPGems.ToString();
         curPlayerCoinTxt.text = curPCoin.ToString();
     }
     public void OnBuyBonus(int index)
     {
+        itemIndexBuy = index;
         switch (index)
         {
             case 0:
@@ -48,6 +53,7 @@ public class ShopSC : MonoBehaviour
                 {
                     //Do buy
                     HandleBuyItem(unitPrice);
+                    genCtr.OnUpdateBoostingFromShop(0);
                 } else SwitchPanel(false, true);
                 break;
             case 1:
@@ -57,6 +63,7 @@ public class ShopSC : MonoBehaviour
                 {
                     //Do buy
                     HandleBuyItem(unitPrice);
+                    genCtr.OnUpdateBoostingFromShop(1);
                 }
                 else SwitchPanel(false, true);
                 break;
@@ -67,6 +74,7 @@ public class ShopSC : MonoBehaviour
                 {
                     //Do buy
                     HandleBuyItem(unitPrice);
+                    genCtr.OnUpdateBoostingFromShop(2);
                 }
                 else SwitchPanel(false, true);
                 break;
@@ -77,6 +85,7 @@ public class ShopSC : MonoBehaviour
                 {
                     //Do buy
                     HandleBuyItem(unitPrice);
+                    genCtr.OnUpdateBoostingFromShop(3);
                 }
                 else SwitchPanel(false, true);
                 break;
@@ -87,6 +96,7 @@ public class ShopSC : MonoBehaviour
                 {
                     //Do buy
                     HandleBuyItem(unitPrice);
+                    genCtr.OnUpdateBoostingFromShop(4);
                 }
                 else SwitchPanel(false, true);
                 break;
@@ -97,6 +107,7 @@ public class ShopSC : MonoBehaviour
                 {
                     //Do buy
                     HandleBuyItem(unitPrice);
+                    genCtr.OnUpdateBoostingFromShop(5);  
                 }
                 else SwitchPanel(false, true);
                 break;
@@ -108,7 +119,8 @@ public class ShopSC : MonoBehaviour
         tempCurCurrency = curPCoin;
         curPCoin = tempCurCurrency - value;
         dataCtr.UpdateTotalScore(curPCoin);
-        //Update GenCtr game cindition
+
+        genCtr.OnLoadBoosting(); //Trigger for GenCtr to re-load the boosting
         HandleShopUIs();
     }
     bool IsAllowBuy(int itemPrice)
@@ -123,7 +135,9 @@ public class ShopSC : MonoBehaviour
     public void BuyByAds()
     {
         adsCtr.ShowAds(2);
-        //Upate GenCtr game condition
+        genCtr.OnUpdateBoostingFromShop(itemIndexBuy);
+        genCtr.OnLoadBoosting();
         OnDoneWarningBuy();
+        itemIndexBuy = -1;
     }
 }

@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class InventoryData
 {
-    public int[] resourceDatas = { 0, 0, 0, 0, 0, 0 };
+    public int[] resourceDatas = { 0, 0, 0, 0, 0 };
 }

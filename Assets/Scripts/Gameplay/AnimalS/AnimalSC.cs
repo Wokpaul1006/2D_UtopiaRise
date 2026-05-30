@@ -9,6 +9,7 @@ public class AnimalSC : MonoBehaviour
 {
     Vector3 previousPos, newPos;
     [HideInInspector] ArkMakingMNSC genCtr;
+    [HideInInspector] GeneralContrlSC omniCtr;
     [SerializeField] GameObject dropItem, coin;
     internal bool isPredators;
     internal int nutritionAmount;
@@ -18,6 +19,7 @@ public class AnimalSC : MonoBehaviour
     {
         previousPos = gameObject.transform.position;
         genCtr = GameObject.Find("CAN_ArkMaking").GetComponent<ArkMakingMNSC>();
+        omniCtr = GameObject.Find("CAN_GenControl").GetComponent<GeneralContrlSC>();
         InvokeRepeating(nameof(WanderAround), 0f, 2f);
         hitCount = 0;
         Invoke(nameof(CaculateChanceToDropCoin), 5f);
@@ -60,12 +62,21 @@ public class AnimalSC : MonoBehaviour
         hitCount++;
         if (hitCount >= 3)
         {
-            Instantiate(dropItem, new Vector3(gameObject.transform.position.x - 0.25f, gameObject.transform.position.y, 0), Quaternion.identity);
+            if(omniCtr.isBoostFruits == 1)
+            {
+                Instantiate(dropItem, new Vector3(gameObject.transform.position.x - 0.25f, gameObject.transform.position.y, 0), Quaternion.identity);
+                Instantiate(dropItem, new Vector3(gameObject.transform.position.x + 0.25f, gameObject.transform.position.y, 0), Quaternion.identity);
+            }
+            else if(omniCtr.isBoostFruits != 1)
+            {
+                Instantiate(dropItem, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, 0), Quaternion.identity);
+            }
+
             if (chanceDropMoney > 20)
             {
                 Instantiate(coin, new Vector3(gameObject.transform.position.x - 0.25f, gameObject.transform.position.y, 0), Quaternion.identity);
             }
-            genCtr.curTreeOnScreen--;
+            genCtr.curPreyOnScreen--;
             Destroy(gameObject);
         }else
         {
@@ -79,12 +90,21 @@ public class AnimalSC : MonoBehaviour
         if (hitCount >= 3)
         {
             //Case of decease
-            Instantiate(dropItem, new Vector3(gameObject.transform.position.x - 0.25f, gameObject.transform.position.y, 0), Quaternion.identity);
+            if (omniCtr.isBoostFruits == 1)
+            {
+                Instantiate(dropItem, new Vector3(gameObject.transform.position.x - 0.25f, gameObject.transform.position.y, 0), Quaternion.identity);
+                Instantiate(dropItem, new Vector3(gameObject.transform.position.x + 0.25f, gameObject.transform.position.y, 0), Quaternion.identity);
+            }
+            else if (omniCtr.isBoostFruits != 1)
+            {
+                Instantiate(dropItem, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, 0), Quaternion.identity);
+            }
+
             if (chanceDropMoney > 70)
             {
                 Instantiate(coin, new Vector3(gameObject.transform.position.x - 0.25f, gameObject.transform.position.y, 0), Quaternion.identity);
             }
-            genCtr.curTreeOnScreen--;
+            genCtr.curPredatorOnScreen--;
             Destroy(gameObject);
         }else
         {

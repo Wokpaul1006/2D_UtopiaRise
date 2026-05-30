@@ -7,10 +7,12 @@ public class IronMinesSC : MonoBehaviour
 {
     [SerializeField] GameObject iron;
     [HideInInspector] ArkMakingMNSC genCtr;
+    [HideInInspector] GeneralContrlSC omniCtr;
     private int resourceAmount, curResourceCount;
     void Start()
     {
         genCtr = GameObject.Find("CAN_ArkMaking").GetComponent<ArkMakingMNSC>();
+        omniCtr = GameObject.Find("CAN_GenControl").GetComponent<GeneralContrlSC>();
         resourceAmount = 100;
         curResourceCount = 0;
     }
@@ -27,7 +29,15 @@ public class IronMinesSC : MonoBehaviour
         curResourceCount++;
         Vector3 tempPos;
         tempPos = new Vector3(gameObject.transform.position.x + (Random.Range(2, 4)), gameObject.transform.position.y + (Random.Range(1, 3)), 0);
-        Instantiate(iron, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, 0), Quaternion.identity);
+        if (omniCtr.isBoostIron == 1)
+        {
+            Instantiate(iron, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, 0), Quaternion.identity);
+            Instantiate(iron, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, 0), Quaternion.identity);
+        }
+        else if (omniCtr.isBoostIron != 1)
+        {
+            Instantiate(iron, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, 0), Quaternion.identity);
+        }
         iron.transform.DOMove(tempPos, 1f);
         if (curResourceCount >= resourceAmount)
         {

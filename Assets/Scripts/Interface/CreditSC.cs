@@ -7,8 +7,8 @@ public class CreditSC : MonoBehaviour
     [HideInInspector] GeneralContrlSC genCtr;
     void Start() { genCtr = GameObject.Find("CAN_GenControl").GetComponent<GeneralContrlSC>(); }
     void Update() { }
-    public void ToPrivaciPolicy() { Application.OpenURL("https://sadekgame.wordpress.com/2024/10/17/dino-adventure-privacy-policy/"); }
-    public void ToTermUse() { Application.OpenURL("https://sadekgame.wordpress.com/"); }
+    public void ToPrivaciPolicy() { Application.OpenURL("https://sadekgame.wordpress.com/2025/07/13/privacy-policy-of-utopia-rise/"); }
+    public void ToTermUse() { Application.OpenURL("https://sadekgame.wordpress.com/2025/11/15/temr-use-utopia-rise/"); }
     public void ToFB() { Application.OpenURL("https://www.facebook.com/sadeksoftVn"); }
     public void ToIG() { Application.OpenURL("https://www.instagram.com/sdsoftvn/"); }
     public void ToX() { Application.OpenURL("https://x.com/SadekGame15769"); }

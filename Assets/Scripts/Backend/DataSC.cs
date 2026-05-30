@@ -20,6 +20,9 @@ public class DataSC : MonoBehaviour
     [HideInInspector] public int pAllowClaimDaily, pDailyStreak;
     [HideInInspector] public string pLastDailyClaim;
 
+    //In-game boosting
+    [HideInInspector] public int pBoostWood, pBoostIron, pBoostStone, pBoostFruits, pBoostCrop, pBoostCoin;
+
     [SerializeField] SaveSystem saveSys;
     private void Awake()
     {
@@ -67,6 +70,14 @@ public class DataSC : MonoBehaviour
         PlayerPrefs.SetString("LastPatrolDailyTime", "");
         PlayerPrefs.SetInt("PatrolDailyStreak", 0);
 
+        //In-game Boosting
+        PlayerPrefs.SetInt("BoostWood", 0);
+        PlayerPrefs.SetInt("BoostIron", 0);
+        PlayerPrefs.SetInt("BoostStone", 0);
+        PlayerPrefs.SetInt("BoostFruits", 0);
+        PlayerPrefs.SetInt("BoostCrop", 0);
+        PlayerPrefs.SetInt("BoostCoin", 0);
+
         Invoke("LoadOldPlayer", 3f); //De tam thoi
     }
     private void LoadOldPlayer()
@@ -81,6 +92,14 @@ public class DataSC : MonoBehaviour
         pLastDailyClaim = PlayerPrefs.GetString("LastPatrolDailyTime");
         pAllowClaimDaily = PlayerPrefs.GetInt("AllowClaimDaily");
         pDailyStreak = PlayerPrefs.GetInt("PatrolDailyStreak");
+
+        //In-game boosting
+        pBoostWood = PlayerPrefs.GetInt("BoostWood");
+        pBoostIron = PlayerPrefs.GetInt("BoostIron");
+        pBoostStone = PlayerPrefs.GetInt("BoostStone");
+        pBoostFruits = PlayerPrefs.GetInt("BoostFruits");
+        pBoostCrop = PlayerPrefs.GetInt("BoostCrop");
+        pBoostCoin = PlayerPrefs.GetInt("BoostCoin");
     }
     public void DataDelete()
     {
@@ -103,10 +122,8 @@ public class DataSC : MonoBehaviour
     }
     public void UpdateTotalScore(int currency)
     {
-        PlayerPrefs.SetInt("Totalscore", currency);
+        PlayerPrefs.SetInt("TotalCoin", currency);
         pCoin = PlayerPrefs.GetInt("TotalCoin");
-        int[] a = { pWoods, pIron, pStone, pFruits, pCrop, pCoin };
-        saveSys.OnSaveResourceData(a);
     }
     public void UpdateTotalGem(int gems)
     {
@@ -133,7 +150,7 @@ public class DataSC : MonoBehaviour
     public void UpdateAllowClaimDaily(int state)
     {
         PlayerPrefs.SetInt("AllowClaimDaily", state);
-        pAllowClaimDaily = PlayerPrefs.GetInt("AllowClaimAllowClaimDaily");
+        pAllowClaimDaily = PlayerPrefs.GetInt("AllowClaimDaily");
     }
     public void UpdateStreak(int value)
     {
@@ -173,7 +190,48 @@ public class DataSC : MonoBehaviour
         int[] a = { pWoods, pIron, pStone, pFruits, pCrop, pCoin};
         saveSys.OnSaveResourceData(a);
     }
+
     #endregion
+    public void UpdatePlayerBoost(int indexs, int value)
+    {
+        switch (indexs)
+        {
+            case 0:
+                PlayerPrefs.SetInt("BoostWood", value);
+                pBoostWood = PlayerPrefs.GetInt("BoostWood");
+                break;
+            case 1:
+                PlayerPrefs.SetInt("BoostIron", value);
+                pBoostIron = PlayerPrefs.GetInt("BoostIron");
+                break;
+            case 2:
+                PlayerPrefs.SetInt("BoostStone", value);
+                pBoostStone = PlayerPrefs.GetInt("BoostStone");
+                break;
+            case 3:
+                PlayerPrefs.SetInt("BoostFruits", value);
+                pBoostFruits = PlayerPrefs.GetInt("BoostFruits");
+                break;
+            case 4:
+                PlayerPrefs.SetInt("BoostCrop", value);
+                pBoostCrop = PlayerPrefs.GetInt("BoostCrop");
+                break;
+            case 5:
+                PlayerPrefs.SetInt("BoostWood", value);
+                pBoostWood = PlayerPrefs.GetInt("BoostWood");
+                PlayerPrefs.SetInt("BoostIron", value);
+                pBoostIron = PlayerPrefs.GetInt("BoostIron");
+                PlayerPrefs.SetInt("BoostStone", value);
+                pBoostStone = PlayerPrefs.GetInt("BoostStone");
+                PlayerPrefs.SetInt("BoostFruits", value);
+                pBoostFruits = PlayerPrefs.GetInt("BoostFruits");
+                PlayerPrefs.SetInt("BoostCrop", value);
+                pBoostCrop = PlayerPrefs.GetInt("BoostCrop");
+                PlayerPrefs.SetInt("BoostCoin", value);
+                pBoostCoin = PlayerPrefs.GetInt("BoostCoin");
+                break;
+        }
+    }
 
     #region Checking Zone
     private bool CheckFirstPlay()
@@ -201,11 +259,11 @@ public class DataSC : MonoBehaviour
         pStone = inventLoad.resourceDatas[2];
         pFruits = inventLoad.resourceDatas[3];
         pCrop = inventLoad.resourceDatas[4];
-        pCoin = inventLoad.resourceDatas[5];
+        pCoin = PlayerPrefs.GetInt("TotalCoin");
     }
     public void OnAutoSaveInfors()
     {
-        int[] a = { pWoods, pIron, pStone, pFruits, pCrop, pCoin };
+        int[] a = { pWoods, pIron, pStone, pFruits, pCrop};
         saveSys.OnSaveResourceData(a);
     }
     private void OnResetJSON() { saveSys.OnReset(); }

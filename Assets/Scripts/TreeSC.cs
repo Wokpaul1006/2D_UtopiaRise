@@ -9,11 +9,13 @@ public class TreeSC : MonoBehaviour
     [SerializeField] NoahSC noah;
     [SerializeField] GameObject wood, fruits;
     [HideInInspector] ArkMakingMNSC genCtr;
+    [HideInInspector] GeneralContrlSC omniCtr;
     int hitCount, randWoodDrop;
     int chanceDropFruits;
     void Start()
     {
         genCtr = GameObject.Find("CAN_ArkMaking").GetComponent<ArkMakingMNSC>();
+        omniCtr = GameObject.Find("CAN_GenControl").GetComponent<GeneralContrlSC>();
         hitCount = 0;
         randWoodDrop = Random.Range(1, 4);
         chanceDropFruits = Random.Range(1, 100);
@@ -28,14 +30,32 @@ public class TreeSC : MonoBehaviour
     }
     private void OnSpawnWood()
     {
-        for (int i = 1; i < randWoodDrop; i++)
+        if(omniCtr.isBoostWood == 1)
         {
-            Instantiate(wood, new Vector3(gameObject.transform.position.x - 0.25f, gameObject.transform.position.y, 0), Quaternion.identity);
+            for (int i = 1; i < randWoodDrop * 2; i++)
+            {
+                Instantiate(wood, new Vector3(gameObject.transform.position.x - 0.25f, gameObject.transform.position.y, 0), Quaternion.identity);
+            }
+        }else  if(omniCtr.isBoostWood != 1)
+        {
+            for (int i = 1; i < randWoodDrop; i++)
+            {
+                Instantiate(wood, new Vector3(gameObject.transform.position.x - 0.25f, gameObject.transform.position.y, 0), Quaternion.identity);
+            }
         }
+       
     }
     private void OnSpawnFruist()
     {
-        Instantiate(fruits, new Vector3(gameObject.transform.position.x - 0.25f, gameObject.transform.position.y, 0), Quaternion.identity);
+        if(omniCtr.isBoostFruits == 1)
+        {
+            Instantiate(fruits, new Vector3(gameObject.transform.position.x - 0.25f, gameObject.transform.position.y, 0), Quaternion.identity);
+            Instantiate(fruits, new Vector3(gameObject.transform.position.x + 0.25f, gameObject.transform.position.y, 0), Quaternion.identity);
+        }
+        else if(omniCtr.isBoostFruits != 1)
+        {
+            Instantiate(fruits, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, 0), Quaternion.identity);
+        }
     }
     private void OnHandleChoping()
     {

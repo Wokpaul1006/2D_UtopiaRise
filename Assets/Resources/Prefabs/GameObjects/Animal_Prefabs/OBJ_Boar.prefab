@@ -171,5 +171,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 368bb4a7741110a47a51615ea2a4aa94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropItem: {fileID: 0}
+  dropItem: {fileID: 3458337980191087320, guid: 4eb1899fd6bae47428d4c33bc76d3dda, type: 3}
   coin: {fileID: 0}
