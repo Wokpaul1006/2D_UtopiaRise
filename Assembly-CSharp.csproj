@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{8D441CA3-1174-F173-403B-828254534012}</ProjectGuid>
+    <ProjectGuid>{27A687C6-117C-C845-79DD-456517ACCC67}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -134,9 +134,6 @@
     <Compile Include="Assets\Scripts\Gameplay\AnimalS\GooseSC.cs" />
     <Compile Include="Assets\Scripts\Backend\SoundSC.cs" />
     <Compile Include="Assets\Scripts\Interface\PromotionSC.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Assets\AddressableAssetsData\link.xml" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -1118,7 +1115,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{90AEEC7E-A9E7-58A5-CE23-CB42C3809F9E}</Project>
+      <Project>{0313B86F-D9BE-5A65-1964-38F6B4A4A85B}</Project>
       <Name>Assembly-CSharp-firstpass</Name>
     </ProjectReference>
   </ItemGroup>
